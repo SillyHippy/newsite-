@@ -22,17 +22,17 @@ jobs:
           node-version: 18
           cache: 'npm'
 
-      - name: Install Dependencies  #Not Needed
+      - name: Install Dependencies  # Not needed for a static site
         run: npm install
 
-      - name: Build #Not Needed
+      - name: Build  # Not needed for a static site
         run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4 #This is the line that needed to be changed
+        uses: actions/upload-pages-artifact@v2  # CORRECT ACTION AND VERSION
         with:
           path: ./  # Deploy the entire current directory
 
