@@ -14,20 +14,15 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-      
-      - name: List files
-        run: |
-          echo "Files to be deployed:"
-          ls -la
-        
+        uses: actions/checkout@v4  # CORRECT: v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2  # CORRECT: v2
         with:
-          path: .  # Deploy the entire repository
+          path: ./  # CORRECT: Upload root directory
 
       - name: Deploy to GitHub Pages
         id: deployment
