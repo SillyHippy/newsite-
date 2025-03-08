@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Or 'master' if you're using the older default branch name
+      - main  # Or 'master'
 
 jobs:
   deploy:
@@ -16,11 +16,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install  #This isn't needed
+
+      - name: Build
+        run: npm run build #This isn't needed
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4  # CHANGED TO v4
         with:
           path: ./  # Deploy the entire current directory
 
