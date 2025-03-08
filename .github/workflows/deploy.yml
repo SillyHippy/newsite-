@@ -20,9 +20,9 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2  # Corrected to v2
         with:
-          path: .  # Deploy the entire repository, change this if your files are in a subdirectory
+          path: ./  # Corrected Path
 
       - name: Deploy to GitHub Pages
         id: deployment
