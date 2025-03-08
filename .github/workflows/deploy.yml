@@ -16,25 +16,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          # Removed the cache: 'npm' line to avoid requiring package-lock.json
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build  # Make sure this points to your actual build output directory
+          path: .  # Deploy the entire repository, change this if your files are in a subdirectory
 
       - name: Deploy to GitHub Pages
         id: deployment
