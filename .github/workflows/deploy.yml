@@ -14,7 +14,7 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # THIS IS THE CRITICAL CHANGE
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -22,19 +22,19 @@ jobs:
           node-version: 18
           cache: 'npm'
 
-      - name: Install Dependencies  # Not needed for a static site
+      - name: Install Dependencies  # Not needed for static site
         run: npm install
 
-      - name: Build  # Not needed for a static site
+      - name: Build  # Not needed for static site
         run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2  # CORRECT ACTION AND VERSION
+        uses: actions/upload-pages-artifact@v2  # Correct companion action
         with:
-          path: ./  # Deploy the entire current directory
+          path: ./
 
       - name: Deploy to GitHub Pages
         id: deployment
