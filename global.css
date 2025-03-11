@@ -193,3 +193,13 @@ body.mobile-menu-active {
         display: none !important;
     }
 }
+/* Prevent overflow */
+body {
+    overflow-x: hidden;
+}
+
+/* Ensure mobile header is styled correctly */
+.mobile-logo-img {
+    max-width: 100%;
+    height: auto;
+}
