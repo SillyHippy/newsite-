@@ -2,47 +2,41 @@
 
 /* Fix for horizontal scrollbar issue */
 body {
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
-    max-width: 100%; /* Ensure body doesn't exceed viewport width */
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 img {
-    max-width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Prevent inline spacing issues */
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.elementor-section,
-.elementor-container,
-.elementor-column,
-.elementor-widget-wrap {
-    max-width: 100%; /* Ensure Elementor containers are within viewport */
-    box-sizing: border-box; /* Include padding and border in element's total width */
+.elementor-section, .elementor-container, .elementor-column, .elementor-widget-wrap {
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-/* You might need to adjust these further depending on your specific layout */
-/* Example for potentially problematic elements - adjust selectors as needed */
-.twbb_section,
-.e-con {
-    overflow-x: hidden; /* Ensure these sections don't cause horizontal overflow */
-    overflow-y: auto; /* Let vertical scroll be automatic if needed */
+.twbb_section, .e-con {
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 html, body {
-    overflow-y: auto !important; /* Override inline style, allow vertical scroll when needed */
+    overflow-y: auto !important;
 }
-/* Mobile Header Styles */
+
+/* Mobile Header Styles - DEFAULT STATE (DESKTOP) - HIDE IT */
 .mobile-header {
-    display: none !important; /* Hidden by default on desktop - ADDED !important HERE */
-    position: relative; /* For positioning logo and icon */
+    display: none; /* Hidden on desktop by default */
+    position: relative;
     padding: 15px 20px;
-    /* display: flex;  <-- REMOVE THIS LINE */
-    justify-content: space-between; /* Space logo and icon */
-    align-items: center; /* Vertically align items */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mobile-logo {
-    width: 70px; /* Adjust logo size as needed */
+    width: 70px;
 }
 
 .mobile-logo img {
@@ -50,7 +44,7 @@ html, body {
     height: auto;
 }
 
-/* Hamburger Icon Styles (Basic Spin Animation - you might need more detailed CSS for other styles) */
+/* Hamburger Icon Styles */
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -75,7 +69,7 @@ html, body {
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000; /* Black color for active hamburger */
+  background-color: #000;
 }
 
 .hamburger-box {
@@ -88,12 +82,12 @@ html, body {
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -2px; /* Half the thickness */
+  margin-top: -2px;
 }
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 20px;
   height: 2px;
-  background-color: #000; /* Black color for hamburger lines */
+  background-color: #000;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
@@ -138,7 +132,6 @@ html, body {
   transform: rotate(-90deg);
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
 
 /* Mobile Menu Styles */
 .mobile-menu {
@@ -193,21 +186,28 @@ html, body {
     color: #ccc; /* Lighter color on hover */
 }
 
-/* Media Query to Show Mobile Header and Hide Desktop Menu on Smaller Screens */
-@media (max-width: 767px) { /* Adjust breakpoint if needed */
+/* Media Query for Mobile Screens (max-width: 767px) */
+@media (max-width: 767px) {
+    /* SHOW MOBILE HEADER ON MOBILE */
     .mobile-header {
-        display: flex; /* Show mobile header */
+        display: flex !important; /* Show mobile header - IMPORTANT! */
     }
 
-    .elementor-element-684c38b.twbb_section .e-con-inner > .elementor-element-b53a816, /* Desktop Logo Selector - Adjust if necessary */
-    .elementor-element-df54756.twbb-nav-menu__align-center, /* Desktop Menu Selector - Adjust if necessary */
-    .elementor-element-ddb5380.elementor-widget-button /* Desktop Button Selector - Adjust if necessary */
-    {
-        display: none !important; /* Hide desktop header elements */
+    /* HIDE DESKTOP HEADER ELEMENTS ON MOBILE */
+    .desktop-logo,
+    .desktop-menu,
+    .desktop-button,
+    .elementor-element-684c38b.twbb_section.elementor-hidden-mobile.e-con-boxed.e-con.e-parent { /* More Specific Desktop Header Selector */
+        display: none !important; /* Hide desktop header elements - IMPORTANT! */
     }
 
-     /* Style for logo on mobile (smaller size) - NEW */
-    .mobile-header .elementor-element-b53a816.desktop-logo .elementor-widget-container { /* Target the logo inside mobile header */
+     /* Style for logo on mobile (smaller size) */
+    .mobile-header .elementor-element-b53a816.desktop-logo .elementor-widget-container {
         max-width: 70px; /* Smaller logo size on mobile - adjust as needed */
     }
+}
+
+/* Desktop Logo Styling (outside media query) */
+.desktop-logo .elementor-widget-container {
+    /* Desktop logo already sized by Elementor, can leave this empty */
 }
