@@ -112,7 +112,7 @@ button.hamburger:active {
     min-height: auto !important;
 }
 
-/* Mobile Menu Styles */
+/* Mobile Menu Styles - Fix visibility issues */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -123,12 +123,24 @@ button.hamburger:active {
     z-index: 999;
     overflow-y: auto;
     max-height: calc(100vh - 70px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .mobile-menu.is-active {
     display: block !important;
 }
 
+/* Ensure menu items are visible */
+.mobile-nav-item a {
+    display: block;
+    padding: 15px 20px;
+    color: white !important; /* Force white text */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Make sure mobile navigation list is defined */
 .mobile-nav-list {
     list-style: none;
     padding: 0;
