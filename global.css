@@ -61,6 +61,7 @@ html, body {
 .mobile-logo-img {
     max-height: 40px;
     width: auto;
+    display: block;
 }
 
 /* Hamburger Menu Icon - Fix the styling */
@@ -72,10 +73,12 @@ html, body {
     height: 22px;
     background-color: transparent !important; /* Force transparent background */
     border: none;
-    cursor: pointer;
-    padding: 0;
+    cursor: pointer !important;
+    padding: 5px !important; /* Add a little padding to make it easier to click */
+    margin: 0;
     box-sizing: border-box;
     outline: none;
+    z-index: 1010; /* Make sure it's above other elements */
 }
 
 .hamburger-line {
@@ -97,6 +100,25 @@ html, body {
     transform: translateY(-9px) rotate(-45deg);
 }
 
+/* Reset button styling */
+button.hamburger {
+    min-width: auto !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Reset any theme-specific button styling */
+button.hamburger:hover,
+button.hamburger:focus,
+button.hamburger:active {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
 /* Mobile Menu Styles */
 .mobile-menu {
     display: none;
@@ -112,7 +134,7 @@ html, body {
 }
 
 .mobile-menu.is-active {
-    display: block;
+    display: block !important;
 }
 
 .mobile-nav-list {
