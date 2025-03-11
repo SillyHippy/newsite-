@@ -1,29 +1,23 @@
 import os
 import re
 
-def remove_code_blocks_from_html_files(repo_path):
+def remove_wprmenu_code_from_html_files(repo_path):
     """
-    Removes specific HTML, CSS, and JavaScript code blocks from all HTML files
-    within the given repository path and its subfolders.
+    Removes wprmenu_bar HTML, CSS, and JS code from HTML files in a repository.
 
     Args:
-        repo_path (str): The path to the root directory of your repository.
+        repo_path (str): Path to the repository root directory.
     """
 
-    html_block_markers = (
-        r"--- START DELETE HTML ---.*?--- END DELETE HTML ---",
-        re.DOTALL | re.IGNORECASE  # re.DOTALL to match across lines, re.IGNORECASE for case-insensitive matching
-    )
-    css_block_markers = (
-        r"/\* START DELETE CSS \*/.*?/\* END DELETE CSS \*/",
-        re.DOTALL | re.IGNORECASE
-    )
-    js_block_markers = (
-        r"--- START DELETE JAVASCRIPT ---.*?--- END DELETE JAVASCRIPT ---",
-        re.DOTALL | re.IGNORECASE
-    )
+    # HTML regex to find and remove the wprmenu-wrapper div
+    html_regex = re.compile(r'(?s)<!-- Overlay Starts here -->.*?<div class="wprm-wrapper">.*?<\/div>', re.IGNORECASE)
 
-    block_markers_list = [html_block_markers, css_block_markers, js_block_markers]
+    # CSS regex to comment out the entire two_critical_css style block
+    css_regex = re.compile(r'(?s)<style class="two_critical_css".*?>.*?<\/style>')
+
+    # JavaScript regex to comment out wprmenu.js-js-extra and wprmenu.js-js <script> tags
+    js_regex = re.compile(r'(?s) <script data-two_delay_id="two_67a929174068e" data-two_delay_src="inline" id="wprmenu\.js-js-extra".*?<\/script>\s*<script data-two_delay_id="two_67a92917406a2" data-two_delay_src="\/wp-includes\/js\/wprmenu\.js\?ver=3\.1\.8" id="wprmenu\.js-js".*?<\/script>')
+
 
     for root, _, files in os.walk(repo_path):
         for file in files:
@@ -35,9 +29,15 @@ def remove_code_blocks_from_html_files(repo_path):
 
                     modified_content = file_content
 
-                    for markers in block_markers_list:
-                        block_regex, flags = markers
-                        modified_content = re.sub(block_regex, '', modified_content, flags=flags)
+                    # Remove HTML
+                    modified_content = re.sub(html_regex, '', modified_content)
+
+                    # Comment out CSS (entire block)
+                    modified_content = re.sub(css_regex, '<!-- Removed wprmenu CSS -->\n<!-- Original CSS Block Below -->\n<!-- \\0 -->\n<!-- End removed wprmenu CSS -->', modified_content)
+
+                    # Comment out JavaScript
+                    modified_content = re.sub(js_regex, '<!-- Removed wprmenu Javascript -->\n<!-- Original Javascript Block Below -->\n<!-- \\0 -->\n<!-- End removed wprmenu Javascript -->', modified_content)
+
 
                     with open(filepath, 'w', encoding='utf-8') as f:
                         f.write(modified_content)
@@ -51,5 +51,5 @@ if __name__ == "__main__":
     if not os.path.isdir(repo_directory):
         print(f"Error: '{repo_directory}' is not a valid directory.")
     else:
-        remove_code_blocks_from_html_files(repo_directory)
+        remove_wprmenu_code_from_html_files(repo_directory)
         print("Finished processing HTML files.")
