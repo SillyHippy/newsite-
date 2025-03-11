@@ -1,10 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOMContentLoaded fired - initializing mobile menu");
+    
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
     const body = document.body;
 
+    console.log("Hamburger element:", hamburger);
+    console.log("Mobile menu element:", mobileMenu);
+
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', function() {
+            console.log("Hamburger clicked - toggling menu");
             hamburger.classList.toggle('is-active');
             mobileMenu.classList.toggle('is-active');
             body.classList.toggle('mobile-menu-active');
@@ -19,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 body.classList.remove('mobile-menu-active');
             });
         });
+    } else {
+        console.error("Hamburger or mobile menu elements not found!");
     }
     
     // Adjust behavior on resize
