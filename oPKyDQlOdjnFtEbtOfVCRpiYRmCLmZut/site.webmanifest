@@ -3,13 +3,13 @@
   "short_name": "JLS",
   "icons": [
     {
-      "src": "/https://github.com/SillyHippy/website1/blob/main/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/favicon.svg/web-app-manifest-192x192.png",
+      "src": "/website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/https://github.com/SillyHippy/website1/blob/main/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/favicon.svg/web-app-manifest-512x512.png",
+      "src": "/website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
