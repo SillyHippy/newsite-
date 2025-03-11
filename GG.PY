@@ -10,13 +10,13 @@ def remove_wprmenu_code_from_html_files(repo_path):
     """
 
     # HTML regex to find and remove the wprmenu-wrapper div
-    html_regex = re.compile(r'(?s)<!-- Overlay Starts here -->.*?<div class="wprm-wrapper">.*?<\/div>', re.IGNORECASE)
+    html_regex = re.compile(r'(?s)<div class="wprm-wrapper">.*?<\/div>', re.IGNORECASE)
 
     # CSS regex to comment out the entire two_critical_css style block
     css_regex = re.compile(r'(?s)<style class="two_critical_css".*?>.*?<\/style>')
 
-    # JavaScript regex to comment out wprmenu.js-js-extra and wprmenu.js-js <script> tags
-    js_regex = re.compile(r'(?s) <script data-two_delay_id="two_67a929174068e" data-two_delay_src="inline" id="wprmenu\.js-js-extra".*?<\/script>\s*<script data-two_delay_id="two_67a92917406a2" data-two_delay_src="\/wp-includes\/js\/wprmenu\.js\?ver=3\.1\.8" id="wprmenu\.js-js".*?<\/script>')
+    # JavaScript regex to comment out wprmenu.js-js-extra and wprmenu.js-js <script> tags (more robust ID matching)
+    js_regex = re.compile(r'(?s)<script.*?id="wprmenu\.js-js-extra".*?<\/script>.*?<script.*?id="wprmenu\.js-js".*?<\/script>')
 
 
     for root, _, files in os.walk(repo_path):
