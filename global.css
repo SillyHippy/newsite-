@@ -33,10 +33,10 @@ html, body {
 }
 /* Mobile Header Styles */
 .mobile-header {
-    display: none; /* Hidden by default on desktop */
+    display: none !important; /* Hidden by default on desktop - ADDED !important HERE */
     position: relative; /* For positioning logo and icon */
     padding: 15px 20px;
-    /* display: flex;  <-- REMOVE THIS LINE - IT'S CAUSING THE PROBLEM */
+    /* display: flex;  <-- REMOVE THIS LINE */
     justify-content: space-between; /* Space logo and icon */
     align-items: center; /* Vertically align items */
 }
@@ -210,10 +210,4 @@ html, body {
     .mobile-header .elementor-element-b53a816.desktop-logo .elementor-widget-container { /* Target the logo inside mobile header */
         max-width: 70px; /* Smaller logo size on mobile - adjust as needed */
     }
-}
-
-/* Desktop Logo Styling (outside media query - for desktop view) */
-.desktop-logo .elementor-widget-container {
-    /* Add any desktop-specific logo styling here if needed */
-    /* Example: max-width: 150px; */
 }
