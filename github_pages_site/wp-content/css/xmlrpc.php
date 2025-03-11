@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html class="twbb" lang="en-US">
- 
-<!-- Mirrored from justlegalsolutions.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Mar 2025 22:45:54 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-<head>
-<link rel="icon" type="image/png" href="website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/favicon-96x96.html" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/favicon.html" />
-<link rel="shortcut icon" href="website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/favicon-2.html" />
-<link rel="apple-touch-icon" sizes="180x180" href="website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/apple-touch-icon.html" />
-<link rel="manifest" href="website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/site.html" />
+ <head>
+<link rel="icon" type="image/png" href="/website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/favicon.svg" />
+<link rel="shortcut icon" href="/website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/apple-touch-icon.png" />
+<link rel="manifest" href="/website1/oPKyDQlOdjnFtEbtOfVCRpiYRmCLmZut/site.webmanifest" />
 
     
     
@@ -48,13 +45,13 @@
    var two_worker_data_css = {"css":[{"url":"https:\/\/fonts.googleapis.com\/css2?family=Open+Sans%3Awght%40300%3B400%3B600%3B700%3B800&display=swap#038;display=swap&#038;ver=2.1.12","media":"all","uid":""},{"url":"https:\/\/fonts.googleapis.com\/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&display=swap#038;display=swap&#038;ver=6.7.1","media":"all","uid":""},{"url":"https:\/\/justlegalsolutions.org\/wp-content\/cache\/tw_optimize\/css\/two_front_page_aggregated_5031697833a1b266bf9fe4d7a52cf38e_delay.min.css?date=1739139351","media":"all","uid":""}]}
   </script>
   <noscript>
-   <link class="two_uncritical_css_noscript" crossorigin="anonymous" href="css20c14?family=Open+Sans%3Awght%40300%3B400%3B600%3B700%3B800&amp;display=swap#038;display=swap&amp;ver=2.1.12" media="all" rel="stylesheet"/>
+   <link class="two_uncritical_css_noscript" crossorigin="anonymous" href="css2?family=Open+Sans%3Awght%40300%3B400%3B600%3B700%3B800&amp;display=swap#038;display=swap&amp;ver=2.1.12" media="all" rel="stylesheet"/>
   </noscript>
   <noscript>
-   <link class="two_uncritical_css_noscript" crossorigin="anonymous" href="css02a7.css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap#038;display=swap&amp;ver=6.7.1" media="all" rel="stylesheet"/>
+   <link class="two_uncritical_css_noscript" crossorigin="anonymous" href="css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap#038;display=swap&amp;ver=6.7.1" media="all" rel="stylesheet"/>
   </noscript>
   <noscript>
-   <link class="two_uncritical_css_noscript" crossorigin="anonymous" href="wp-content/cache/tw_optimize/css/two_front_page_aggregated_5031697833a1b266bf9fe4d7a52cf38e_delay.min3448.css?date=1739139351" media="all" rel="stylesheet"/>
+   <link class="two_uncritical_css_noscript" crossorigin="anonymous" href="wp-content/cache/tw_optimize/css/two_front_page_aggregated_5031697833a1b266bf9fe4d7a52cf38e_delay.min.css?date=1739139351" media="all" rel="stylesheet"/>
   </noscript>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -77,7 +74,7 @@ if(window.two_load_delayed_iframe!==undefined){window.two_delayed_loading_iframe
   <title>
   </title>
   <meta content="max-image-preview:large" name="robots"/>
-  <link href="http://fonts.googleapis.com/" rel="dns-prefetch"/>
+  <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
   <link href="feed/index.html" rel="alternate" title=" » Feed" type="application/rss+xml"/>
   <link href="comments/feed/index.html" rel="alternate" title=" » Comments Feed" type="application/rss+xml"/>
   <script data-two_delay_id="two_67a9291740498" data-two_delay_src="inline" type="text/javascript">
@@ -105,12 +102,12 @@ if(window.two_load_delayed_iframe!==undefined){window.two_delayed_loading_iframe
   </script>
   <link href="wp-json/index.html" rel="https://api.w.org/"/>
   <link href="wp-json/wp/v2/pages/183" rel="alternate" title="JSON" type="application/json"/>
-  <link href="wp-content/css/xmlrpc0db0.html?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+  <link href="/wp-content/css/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
   <meta content="WordPress 6.7.1" name="generator"/>
   <link href="index.html" rel="canonical"/>
   <link href="index.html" rel="shortlink"/>
-  <link href="wp-json/oembed/1.0/embedee51?url=https%3A%2F%2Fjustlegalsolutions.org%2F" rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"/>
-  <link href="wp-json/oembed/1.0/embed-137ca?url=https%3A%2F%2Fjustlegalsolutions.org%2F&amp;format=xml" rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"/>
+  <link href="wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjustlegalsolutions.org%2F" rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"/>
+  <link href="wp-json/oembed/1.0/embed-1?url=https%3A%2F%2Fjustlegalsolutions.org%2F&amp;format=xml" rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"/>
   <meta content="Elementor 3.27.3; features: e_font_icon_svg; settings: css_print_method-external, google_font-enabled, font_display-swap" name="generator"/>
   <link href="wp-content/uploads/2025/02/cropped-cropped-cropped-cropped-ezgif-563de8ffd5926-32x32.jpg" rel="icon" sizes="32x32"/>
   <link href="wp-content/uploads/2025/02/cropped-cropped-cropped-cropped-ezgif-563de8ffd5926-192x192.jpg" rel="icon" sizes="192x192"/>
@@ -225,7 +222,7 @@ r.onload=function(content_){let sheetURL="";if(two_uncritical_fonts_status&&type
 if(r.status!==200){two_XMLHttpRequest_error(excluded_js,data[i],type,i);return;}
 console.log("error in fetching: "+error.toString()+", XMLHttpRequest success "+data[i].url);let modifiedScript=null;if(type=="css"){modifiedScript={id:i,type:type,status:'ok',media:data[i].media,url:sheetURL,uid:data[i].uid,two_uncritical_fonts:two_uncritical_fonts,};}else if(type=="js"){modifiedScript={id:i,type:type,status:'ok',url:sheetURL,uid:data[i].uid};}else if(type=="font"){modifiedScript={type:type,status:'ok',main_url:data[i].url,url:sheetURL,font_face:data[i].font_face};}
 if(excluded_js){modifiedScript.excluded_from_delay=true;}
-two_send_worker_data(modifiedScript);};r.onerror=function(){two_XMLHttpRequest_error(excluded_js,data[i],type,i)};r.open("GET.html",data[i].url,true);r.send();}catch(e){console.log("error in fetching: "+e.toString()+", running fallback for "+data[i].url);var modifiedScript=null;if(type=="css"||type=="js"){modifiedScript={id:i,type:type,status:'error',url:data[i].url,uid:data[i].uid};}else if(type=="font"){modifiedScript={type:type,status:'error',url:data[i].url,font_face:data[i].font_face};}
+two_send_worker_data(modifiedScript);};r.onerror=function(){two_XMLHttpRequest_error(excluded_js,data[i],type,i)};r.open("GET",data[i].url,true);r.send();}catch(e){console.log("error in fetching: "+e.toString()+", running fallback for "+data[i].url);var modifiedScript=null;if(type=="css"||type=="js"){modifiedScript={id:i,type:type,status:'error',url:data[i].url,uid:data[i].uid};}else if(type=="font"){modifiedScript={type:type,status:'error',url:data[i].url,font_face:data[i].font_face};}
 if(excluded_js){modifiedScript.excluded_from_delay=true;}
 two_send_worker_data(modifiedScript);}});});}}}
 function two_XMLHttpRequest_error(excluded_js,data_i,type,i){console.log("error in fetching: XMLHttpRequest failed "+data_i.url);var modifiedScript=null;if(type=="css"||type=="js"){modifiedScript={id:i,type:type,status:'error',url:data_i.url,uid:data_i.uid};}else if(type=="font"){modifiedScript={type:type,status:'error',url:data_i.url,font_face:data_i.font_face};}
@@ -651,7 +648,7 @@ onStylesLoadEvent=new Event("two_css_loaded");window.dispatchEvent(onStylesLoadE
        <div class="elementor-widget-container">
         <div class="elementor-icon-box-wrapper">
          <div class="elementor-icon-box-icon">
-          <a aria-label="Email Us" class="elementor-icon" href="cdn-cgi/l/email-protection.html#f1989f979eb19b8482859d9496909d829e9d8485989e9f82df9e8396" tabindex="-1">
+          <a aria-label="Email Us" class="elementor-icon" href="/cdn-cgi/l/email-protection#4e272028210e243b3d3a222b292f223d21223b3a2721203d60213c29" tabindex="-1">
            <svg aria-hidden="true" class="e-font-icon-svg e-far-envelope" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
             <path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
             </path>
@@ -660,14 +657,14 @@ onStylesLoadEvent=new Event("two_css_loaded");window.dispatchEvent(onStylesLoadE
          </div>
          <div class="elementor-icon-box-content">
           <h4 class="elementor-icon-box-title">
-           <a href="cdn-cgi/l/email-protection.html#1b72757d745b716e686f777e7c7a776874776e6f727475683574697c">
+           <a href="/cdn-cgi/l/email-protection#7910171f1639130c0a0d151c1e18150a16150c0d1016170a57160b1e">
             Email Us
            </a>
           </h4>
           <p class="elementor-icon-box-description">
            You can reach us at
-           <a href="cdn-cgi/l/email-protection.html#a4cdcac2cbe4eed1d7d0c8c1c3c5c8f7cbc8d1d0cdcbcad78acbd6c3">
-            <span class="__cf_email__" data-cfemail="f0999e969fb0ba8583849c9597919ca39f9c8584999f9e83de9f8297">[email&#160;protected]</span>
+           <a href="/cdn-cgi/l/email-protection#e980878f86a9a39c9a9d858c8e8885ba86859c9d8086879ac7869b8e">
+            <span class="__cf_email__" data-cfemail="771e191118373d0204031b1210161b24181b02031e18190459180510">[email&#160;protected]</span>
            </a>
            , We respond promptly to all inquiries.
           </p>
@@ -828,7 +825,7 @@ onStylesLoadEvent=new Event("two_css_loaded");window.dispatchEvent(onStylesLoadE
      <div class="elementor-element elementor-element-57d1942 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget-tablet__width-initial elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="57d1942" data-widget_type="text-editor.default">
       <div class="elementor-widget-container">
        <p>
-        Phone: 539-367-6832 | Email: <a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="2e474048416e445b5d5a424b494f425d41425b5a4741405d00415c49">[email&#160;protected]</a>
+        Phone: 539-367-6832 | Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a33343c351a302f292e363f3d3b362935362f2e333534297435283d">[email&#160;protected]</a>
        </p>
       </div>
      </div>
@@ -865,7 +862,7 @@ onStylesLoadEvent=new Event("two_css_loaded");window.dispatchEvent(onStylesLoadE
       </a>
      </li>
      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-578" id="menu-item-578">
-      <a href="index.html#Courier">
+      <a href="https://justlegalsolutions.org/#Courier">
        Courier Services
       </a>
      </li>
@@ -882,7 +879,7 @@ onStylesLoadEvent=new Event("two_css_loaded");window.dispatchEvent(onStylesLoadE
     </ul>
    </div>
   </div>
-  <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-two_delay_id="two_67a92917406c7" data-two_delay_src="inline">
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-two_delay_id="two_67a92917406c7" data-two_delay_src="inline">
   </script>
   <script data-two_delay_id="two_67a92917406f2" data-two_delay_src="inline" id="twbb-section-generation-embed-script-js-extra" type="text/javascript">
   </script>
@@ -989,8 +986,5 @@ onStylesLoadEvent=new Event("two_css_loaded");window.dispatchEvent(onStylesLoadE
                                         });
                                 }
   </script>
- <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"91e65792bfe52c9d","version":"2025.1.0","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"4c454ec137604aada44c9ff615488542","b":1}' crossorigin="anonymous"></script>
-</body>
-
-<!-- Mirrored from justlegalsolutions.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Mar 2025 22:46:03 GMT -->
+ </body>
 </html>
