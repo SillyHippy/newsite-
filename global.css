@@ -31,3 +31,189 @@ img {
 html, body {
     overflow-y: auto !important; /* Override inline style, allow vertical scroll when needed */
 }
+/* Mobile Header Styles */
+.mobile-header {
+    display: none; /* Hidden by default on desktop */
+    position: relative; /* For positioning logo and icon */
+    padding: 15px 20px;
+    /* display: flex;  <-- REMOVE THIS LINE - IT'S CAUSING THE PROBLEM */
+    justify-content: space-between; /* Space logo and icon */
+    align-items: center; /* Vertically align items */
+}
+
+.mobile-logo {
+    width: 70px; /* Adjust logo size as needed */
+}
+
+.mobile-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hamburger Icon Styles (Basic Spin Animation - you might need more detailed CSS for other styles) */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000; /* Black color for active hamburger */
+}
+
+.hamburger-box {
+  width: 20px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; /* Half the thickness */
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 20px;
+  height: 2px;
+  background-color: #000; /* Black color for hamburger lines */
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -7px;
+}
+.hamburger-inner::after {
+  bottom: -7px;
+}
+
+/* Hamburger Spin Animation */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.068, 0.68, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.068, 0.68, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position to slide from right */
+    top: 0;
+    right: 0;
+    width: 80%; /* Adjust width as needed */
+    max-width: 300px; /* Maximum width of the menu */
+    height: 100%;
+    background-color: #000; /* Black background */
+    color: #fff;
+    z-index: 1000; /* Ensure it's above other content */
+    transform: translateX(100%); /* Initially slide it out to the right */
+    transition: transform 0.3s ease-in-out; /* Smooth slide animation */
+    overflow-y: auto; /* In case menu content is long */
+    padding-top: 60px; /* Add padding below the top */
+}
+
+.mobile-menu.is-active {
+    transform: translateX(0); /* Slide in when active class is added */
+}
+
+.mobile-nav-menu {
+    padding: 20px;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-list li {
+    margin-bottom: 15px; /* Spacing between menu items */
+    border-bottom: 1px solid #333; /* Separator line between items */
+    padding-bottom: 10px;
+}
+
+.mobile-menu-list li:last-child {
+    border-bottom: none; /* Remove separator from last item */
+}
+
+.mobile-menu-list li a {
+    display: block; /* Make links fill the line for easier clicking */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.mobile-menu-list li a:hover, .mobile-menu-list li a:focus {
+    color: #ccc; /* Lighter color on hover */
+}
+
+/* Media Query to Show Mobile Header and Hide Desktop Menu on Smaller Screens */
+@media (max-width: 767px) { /* Adjust breakpoint if needed */
+    .mobile-header {
+        display: flex; /* Show mobile header */
+    }
+
+    .elementor-element-684c38b.twbb_section .e-con-inner > .elementor-element-b53a816, /* Desktop Logo Selector - Adjust if necessary */
+    .elementor-element-df54756.twbb-nav-menu__align-center, /* Desktop Menu Selector - Adjust if necessary */
+    .elementor-element-ddb5380.elementor-widget-button /* Desktop Button Selector - Adjust if necessary */
+    {
+        display: none !important; /* Hide desktop header elements */
+    }
+
+     /* Style for logo on mobile (smaller size) - NEW */
+    .mobile-header .elementor-element-b53a816.desktop-logo .elementor-widget-container { /* Target the logo inside mobile header */
+        max-width: 70px; /* Smaller logo size on mobile - adjust as needed */
+    }
+}
+
+/* Desktop Logo Styling (outside media query - for desktop view) */
+.desktop-logo .elementor-widget-container {
+    /* Add any desktop-specific logo styling here if needed */
+    /* Example: max-width: 150px; */
+}
