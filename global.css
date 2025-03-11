@@ -20,18 +20,6 @@ img {
     box-sizing: border-box; /* Include padding and border in element's total width */
 }
 
-/* You might need to adjust these further depending on your specific layout */
-/* Example for potentially problematic elements - adjust selectors as needed */
-.twbb_section,
-.e-con {
-    overflow-x: hidden; /* Ensure these sections don't cause horizontal overflow */
-    overflow-y: auto; /* Let vertical scroll be automatic if needed */
-}
-
-html, body {
-    overflow-y: auto !important; /* Override inline style, allow vertical scroll when needed */
-}
-
 /* Mobile Header Styles */
 .mobile-header {
     display: none; /* Hidden by default */
