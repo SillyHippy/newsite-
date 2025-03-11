@@ -907,7 +907,34 @@ onStylesLoadEvent=new Event("two_css_loaded");window.dispatchEvent(onStylesLoadE
   </script>
   <script data-two_delay_id="two_dispatchEvent_script">
   </script>
-
+  <script data-pagespeed-no-defer="" data-two-no-delay="">
+   ( function () {
+                              window.addEventListener( "two_css_loaded", function () {
+                                window.two_observer = new IntersectionObserver( items => {
+                                  items.forEach( item => {
+                                    if (item.isIntersecting) {
+                                        if (item.target.dataset.settings) {
+                                            let settings = JSON.parse(item.target.dataset.settings);
+                                            let animation = settings.animation ? settings.animation : settings._animation ? settings._animation : "zoomIn";
+                                            let delay = settings.animation_delay ? settings.animation_delay : settings._animation_delay ? settings._animation_delay : 0;
+                                            setTimeout(() => {
+                                                item.target.className = item.target.className.replace("elementor-invisible", "") + " animated " + animation;
+                                            }, delay);
+                                            delete settings.animation;
+                                            delete settings._animation;
+                                            item.target.dataset.settings = JSON.stringify(settings);
+                                        } else {
+                                            item.target.className = item.target.className.replace("elementor-invisible", "") + " animated zoomIn";
+                                        }
+                                    }
+                                  } )
+                                }, {} );
+                                document.querySelectorAll( ".elementor-invisible" ).forEach( e => {
+                                  window.two_observer.observe( e )
+                                } )
+                              } )
+                            } )();
+  </script>
   <script data-pagespeed-no-defer="" data-two-no-delay="">
    window["two_svg_placeholder"] = "data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E#}"
   </script>
