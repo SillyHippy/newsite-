@@ -71,20 +71,19 @@ html, body {
     justify-content: space-between;
     width: 30px;
     height: 22px;
-    background-color: transparent !important; /* Force transparent background */
-    border: none;
-    cursor: pointer !important;
-    padding: 5px !important; /* Add a little padding to make it easier to click */
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
-    outline: none;
-    z-index: 1010; /* Make sure it's above other elements */
 }
 
 .hamburger-line {
     width: 100%;
     height: 3px;
-    background-color: #000000 !important; /* Force black lines */
+    margin: 3px 0;
+    background-color: #000 !important;
     transition: all 0.3s ease;
 }
 
@@ -100,23 +99,17 @@ html, body {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Reset button styling */
-button.hamburger {
-    min-width: auto !important;
-    min-height: auto !important;
-    padding: 0 !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* Reset any theme-specific button styling */
+/* Override any default button styling */
+button.hamburger,
 button.hamburger:hover,
 button.hamburger:focus,
 button.hamburger:active {
-    background-color: transparent !important;
-    box-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
     outline: none !important;
+    box-shadow: none !important;
+    min-width: auto !important;
+    min-height: auto !important;
 }
 
 /* Mobile Menu Styles */
@@ -130,7 +123,6 @@ button.hamburger:active {
     z-index: 999;
     overflow-y: auto;
     max-height: calc(100vh - 70px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-menu.is-active {
@@ -174,7 +166,8 @@ body.mobile-menu-active {
 /* Responsive styles */
 @media screen and (max-width: 1024px) {
     .mobile-header {
-        display: block !important; /* Force display on mobile */
+        display: flex !important;
+        align-items: center;
     }
     
     /* Add padding to the body to prevent content from hiding behind fixed header */
