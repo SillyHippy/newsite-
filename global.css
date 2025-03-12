@@ -1,0 +1,180 @@
+/* global.css */
+
+/* Fix for horizontal scrollbar issue */
+body {
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    max-width: 100%; /* Ensure body doesn't exceed viewport width */
+}
+
+img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+}
+
+.elementor-section,
+.elementor-container,
+.elementor-column,
+.elementor-widget-wrap {
+    max-width: 100%; /* Ensure Elementor containers are within viewport */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* You might need to adjust these further depending on your specific layout */
+/* Example for potentially problematic elements - adjust selectors as needed */
+.twbb_section,
+.e-con {
+    overflow-x: hidden; /* Ensure these sections don't cause horizontal overflow */
+    overflow-y: auto; /* Let vertical scroll be automatic if needed */
+}
+
+html, body {
+    overflow-y: auto !important; /* Override inline style, allow vertical scroll when needed */
+}
+
+/* Mobile Header Styles */
+.mobile-header {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.mobile-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.mobile-logo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile-logo-img {
+    max-height: 40px;
+    width: auto;
+}
+
+/* Hamburger Menu Icon - Fix the styling */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent !important; /* Force transparent background */
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: black !important; /* Force black lines */
+    transition: all 0.3s ease;
+}
+
+.hamburger.is-active .hamburger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.is-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active .hamburger-line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+    overflow-y: auto;
+    max-height: calc(100vh - 70px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.is-active {
+    display: block;
+}
+
+.mobile-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-item {
+    border-bottom: 1px solid #333;
+}
+
+.mobile-nav-item:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav-item a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav-item a:hover,
+.mobile-nav-item a:focus {
+    background-color: #333;
+}
+
+/* Add top spacing to content to account for fixed header on mobile */
+body.mobile-menu-active {
+    padding-top: 70px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .mobile-header {
+        display: block !important; /* Force display on mobile */
+    }
+    
+    /* Add padding to the body to prevent content from hiding behind fixed header */
+    body {
+        padding-top: 70px;
+    }
+    
+    /* Hide desktop header on mobile/tablet */
+    .elementor-210 {
+        display: none !important;
+    }
+    
+    /* Make sure desktop navigation is hidden */
+    .main-navigation {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    /* Ensure mobile header is hidden on desktop */
+    .mobile-header,
+    .mobile-menu {
+        display: none !important;
+    }
+}
