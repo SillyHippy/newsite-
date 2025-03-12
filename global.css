@@ -2,179 +2,212 @@
 
 /* Fix for horizontal scrollbar issue */
 body {
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
-    max-width: 100%; /* Ensure body doesn't exceed viewport width */
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 img {
-    max-width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Prevent inline spacing issues */
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.elementor-section,
-.elementor-container,
-.elementor-column,
-.elementor-widget-wrap {
-    max-width: 100%; /* Ensure Elementor containers are within viewport */
-    box-sizing: border-box; /* Include padding and border in element's total width */
+.elementor-section, .elementor-container, .elementor-column, .elementor-widget-wrap {
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-/* You might need to adjust these further depending on your specific layout */
-/* Example for potentially problematic elements - adjust selectors as needed */
-.twbb_section,
-.e-con {
-    overflow-x: hidden; /* Ensure these sections don't cause horizontal overflow */
-    overflow-y: auto; /* Let vertical scroll be automatic if needed */
+.twbb_section, .e-con {
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 html, body {
-    overflow-y: auto !important; /* Override inline style, allow vertical scroll when needed */
+    overflow-y: auto !important;
 }
 
-/* Mobile Header Styles */
+/* Mobile Header Styles - DEFAULT STATE (DESKTOP) - HIDE IT */
 .mobile-header {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 10px 0;
-}
-
-.mobile-header-container {
-    display: flex;
+    display: none; /* Hidden on desktop by default */
+    position: relative;
+    padding: 15px 20px;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 
 .mobile-logo {
-    height: 50px;
-    display: flex;
-    align-items: center;
+    width: 70px;
 }
 
-.mobile-logo-img {
-    max-height: 40px;
-    width: auto;
+.mobile-logo img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Hamburger Menu Icon - Fix the styling */
+/* Hamburger Icon Styles */
 .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    background: transparent !important; /* Force transparent background */
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
 }
 
-.hamburger-line {
-    width: 100%;
-    height: 3px;
-    background-color: black !important; /* Force black lines */
-    transition: all 0.3s ease;
+.hamburger-box {
+  width: 20px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
 }
 
-.hamburger.is-active .hamburger-line:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -7px;
+}
+.hamburger-inner::after {
+  bottom: -7px;
 }
 
-.hamburger.is-active .hamburger-line:nth-child(2) {
-    opacity: 0;
+/* Hamburger Spin Animation */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.068, 0.68, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.068, 0.68, 0.19);
 }
 
-.hamburger.is-active .hamburger-line:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 /* Mobile Menu Styles */
 .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    z-index: 999;
-    overflow-y: auto;
-    max-height: calc(100vh - 70px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position to slide from right */
+    top: 0;
+    right: 0;
+    width: 80%; /* Adjust width as needed */
+    max-width: 300px; /* Maximum width of the menu */
+    height: 100%;
+    background-color: #000; /* Black background */
+    color: #fff;
+    z-index: 1000; /* Ensure it's above other content */
+    transform: translateX(100%); /* Initially slide it out to the right */
+    transition: transform 0.3s ease-in-out; /* Smooth slide animation */
+    overflow-y: auto; /* In case menu content is long */
+    padding-top: 60px; /* Add padding below the top */
 }
 
 .mobile-menu.is-active {
-    display: block;
+    transform: translateX(0); /* Slide in when active class is added */
 }
 
-.mobile-nav-list {
+.mobile-nav-menu {
+    padding: 20px;
+}
+
+.mobile-menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.mobile-nav-item {
-    border-bottom: 1px solid #333;
+.mobile-menu-list li {
+    margin-bottom: 15px; /* Spacing between menu items */
+    border-bottom: 1px solid #333; /* Separator line between items */
+    padding-bottom: 10px;
 }
 
-.mobile-nav-item:last-child {
-    border-bottom: none;
+.mobile-menu-list li:last-child {
+    border-bottom: none; /* Remove separator from last item */
 }
 
-.mobile-nav-item a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
+.mobile-menu-list li a {
+    display: block; /* Make links fill the line for easier clicking */
+    color: #fff; /* White text color */
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+    padding: 10px 0;
 }
 
-.mobile-nav-item a:hover,
-.mobile-nav-item a:focus {
-    background-color: #333;
+.mobile-menu-list li a:hover, .mobile-menu-list li a:focus {
+    color: #ccc; /* Lighter color on hover */
 }
 
-/* Add top spacing to content to account for fixed header on mobile */
-body.mobile-menu-active {
-    padding-top: 70px;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 1024px) {
+/* Media Query for Mobile Screens (max-width: 767px) */
+@media (max-width: 767px) {
+    /* SHOW MOBILE HEADER ON MOBILE */
     .mobile-header {
-        display: block !important; /* Force display on mobile */
+        display: flex !important; /* Show mobile header - IMPORTANT! */
     }
-    
-    /* Add padding to the body to prevent content from hiding behind fixed header */
-    body {
-        padding-top: 70px;
+
+    /* HIDE DESKTOP HEADER ELEMENTS ON MOBILE */
+    .desktop-logo,
+    .desktop-menu,
+    .desktop-button,
+    .elementor-element-684c38b.twbb_section.elementor-hidden-mobile.e-con-boxed.e-con.e-parent { /* More Specific Desktop Header Selector */
+        display: none !important; /* Hide desktop header elements - IMPORTANT! */
     }
-    
-    /* Hide desktop header on mobile/tablet */
-    .elementor-210 {
-        display: none !important;
-    }
-    
-    /* Make sure desktop navigation is hidden */
-    .main-navigation {
-        display: none !important;
+
+     /* Style for logo on mobile (smaller size) */
+    .mobile-header .elementor-element-b53a816.desktop-logo .elementor-widget-container {
+        max-width: 70px; /* Smaller logo size on mobile - adjust as needed */
     }
 }
 
-@media screen and (min-width: 1025px) {
-    /* Ensure mobile header is hidden on desktop */
-    .mobile-header,
-    .mobile-menu {
-        display: none !important;
-    }
+/* Desktop Logo Styling (outside media query) */
+.desktop-logo .elementor-widget-container {
+    /* Desktop logo already sized by Elementor, can leave this empty */
 }
