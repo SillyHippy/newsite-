@@ -39,8 +39,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Joseph and his team provided exceptional same-day service for our urgent legal matter. 
-                Professional, reliable, and exactly what we needed when time was critical."
+                &ldquo;Joseph and his team provided exceptional same-day service for our urgent legal matter. 
+                Professional, reliable, and exactly what we needed when time was critical.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Same-Day Process Serving</div>
@@ -71,8 +71,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Fast response, fair pricing, and professional service. They handled our eviction notice 
-                promptly and provided excellent communication throughout the process."
+                &ldquo;Fast response, fair pricing, and professional service. They handled our eviction notice 
+                promptly and provided excellent communication throughout the process.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Eviction Notice Service</div>
@@ -103,8 +103,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Needed divorce papers served quickly and discretely. Joseph handled everything professionally 
-                and kept me updated throughout. Excellent service during a difficult time."
+                &ldquo;Needed divorce papers served quickly and discretely. Joseph handled everything professionally 
+                and kept me updated throughout. Excellent service during a difficult time.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Divorce Document Service</div>
@@ -135,8 +135,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Outstanding service for our small claims court papers. Fair pricing and they got it done 
-                when others couldn't. Professional and reliable process serving."
+                &ldquo;Outstanding service for our small claims court papers. Fair pricing and they got it done 
+                when others couldn&apos;t. Professional and reliable process serving.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Small Claims Process Serving</div>
@@ -167,8 +167,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Emergency weekend service when the courts opened Monday. Joseph came through when we 
-                desperately needed documents served. Can't recommend highly enough."
+                &ldquo;Emergency weekend service when the courts opened Monday. Joseph came through when we 
+                desperately needed documents served. Can&apos;t recommend highly enough.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Emergency Weekend Process Serving</div>
@@ -263,8 +263,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Contract dispute papers needed serving urgently. Joseph's team located the defendant 
-                quickly and served properly. Professional service that helped win our case."
+                &ldquo;Contract dispute papers needed serving urgently. Joseph&apos;s team located the defendant 
+                quickly and served properly. Professional service that helped win our case.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Contract Dispute Process Serving</div>
@@ -295,8 +295,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Property lien papers served efficiently and correctly. Joseph provided excellent 
-                communication and detailed proof of service. Highly professional operation."
+                &ldquo;Property lien papers served efficiently and correctly. Joseph provided excellent 
+                communication and detailed proof of service. Highly professional operation.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Property Lien Process Serving</div>
@@ -327,8 +327,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Bankruptcy papers needed urgent service before deadline. Joseph's team came through 
-                perfectly and saved our filing. Professional and reliable when it mattered most."
+                &ldquo;Bankruptcy papers needed urgent service before deadline. Joseph&apos;s team came through 
+                perfectly and saved our filing. Professional and reliable when it mattered most.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Bankruptcy Document Process Serving</div>
@@ -359,8 +359,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Probate court documents served efficiently during estate proceedings. Joseph's 
-                attention to detail and professionalism made the process smooth during a difficult time."
+                &ldquo;Probate court documents served efficiently during estate proceedings. Joseph&apos;s 
+                attention to detail and professionalism made the process smooth during a difficult time.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Probate Document Process Serving</div>
@@ -391,8 +391,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Personal injury lawsuit papers served professionally and on time. Joseph's team 
-                provided excellent documentation and followed all legal requirements perfectly."
+                &ldquo;Personal injury lawsuit papers served professionally and on time. Joseph&apos;s team 
+                provided excellent documentation and followed all legal requirements perfectly.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Personal Injury Process Serving</div>
@@ -423,8 +423,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Workers compensation documents served quickly and professionally. Joseph's team 
-                understood the urgency and delivered exactly when promised. Excellent service."
+                &ldquo;Workers compensation documents served quickly and professionally. Joseph&apos;s team 
+                understood the urgency and delivered exactly when promised. Excellent service.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Workers Comp Process Serving</div>
@@ -455,8 +455,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Corporate lawsuit documents served to multiple defendants across Oklahoma. Joseph's 
-                team coordinated everything perfectly and provided detailed proof of service."
+                &ldquo;Corporate lawsuit documents served to multiple defendants across Oklahoma. Joseph&apos;s 
+                team coordinated everything perfectly and provided detailed proof of service.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Corporate Litigation Process Serving</div>
@@ -487,8 +487,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Restraining order papers served sensitively and professionally. Joseph handled 
-                a difficult situation with care and ensured proper legal service. Highly recommend."
+                &ldquo;Restraining order papers served sensitively and professionally. Joseph handled 
+                a difficult situation with care and ensured proper legal service. Highly recommend.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Restraining Order Process Serving</div>
@@ -519,8 +519,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Child support modification papers served professionally and on schedule. Joseph's 
-                team understood the importance and delivered excellent service during family proceedings."
+                &ldquo;Child support modification papers served professionally and on schedule. Joseph&apos;s 
+                team understood the importance and delivered excellent service during family proceedings.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Child Support Process Serving</div>
@@ -551,8 +551,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Foreclosure documents served with compassion during a difficult time. Joseph's 
-                professionalism and understanding made a hard situation more manageable. Thank you."
+                &ldquo;Foreclosure documents served with compassion during a difficult time. Joseph&apos;s 
+                professionalism and understanding made a hard situation more manageable. Thank you.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Foreclosure Process Serving</div>
@@ -583,8 +583,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Insurance claim lawsuit papers served efficiently and professionally. Joseph's 
-                team provided detailed affidavits and helped move our case forward quickly."
+                &ldquo;Insurance claim lawsuit papers served efficiently and professionally. Joseph&apos;s 
+                team provided detailed affidavits and helped move our case forward quickly.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Insurance Litigation Process Serving</div>
@@ -615,8 +615,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Medical malpractice lawsuit documents served professionally to multiple medical 
-                facilities. Joseph's team handled complex serving requirements perfectly."
+                &ldquo;Medical malpractice lawsuit documents served professionally to multiple medical 
+                facilities. Joseph&apos;s team handled complex serving requirements perfectly.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Medical Malpractice Process Serving</div>
