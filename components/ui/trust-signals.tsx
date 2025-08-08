@@ -8,7 +8,7 @@ export default function TrustSignals() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block bg-green-100 text-green-800 font-bold rounded-lg px-6 py-3 shadow-md text-xl border border-green-200 mb-6">
-            🏆 50+ Years' Combined Experience in Oklahoma Legal Services
+            🏆 50+ Years&apos; Combined Experience in Oklahoma Legal Services
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Why Oklahoma Trusts Just Legal Solutions
@@ -96,7 +96,7 @@ export default function TrustSignals() {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
-                <span className="text-gray-700">50+ Years' Combined Team & Partner Experience</span>
+                <span className="text-gray-700">50+ Years&apos; Combined Team & Partner Experience</span>
               </li>
               <li className="flex items-center">
                 <CheckCircle className="h-5 w-5 text-green-600 mr-3" />
@@ -124,17 +124,17 @@ export default function TrustSignals() {
             </h3>
             <div className="space-y-4">
               <blockquote className="text-gray-700 italic">
-                "The experience shows. Fast, professional, and reliable. Joseph and his team delivered exactly when promised."
+                &ldquo;The experience shows. Fast, professional, and reliable. Joseph and his team delivered exactly when promised.&rdquo;
               </blockquote>
               <div className="text-sm text-gray-600">- Attorney, Tulsa County Law Firm</div>
               
               <blockquote className="text-gray-700 italic">
-                "You can tell they know what they're doing. Decades of experience in action. Same-day service that actually worked."
+                &ldquo;You can tell they know what they&apos;re doing. Decades of experience in action. Same-day service that actually worked.&rdquo;
               </blockquote>
               <div className="text-sm text-gray-600">- Property Manager, Broken Arrow</div>
               
               <blockquote className="text-gray-700 italic">
-                "Their team's experience in Oklahoma courts is evident. Professional service from start to finish."
+                &ldquo;Their team&apos;s experience in Oklahoma courts is evident. Professional service from start to finish.&rdquo;
               </blockquote>
               <div className="text-sm text-gray-600">- Law Office, Sapulpa</div>
             </div>
