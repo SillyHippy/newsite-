@@ -10,7 +10,7 @@ interface Review {
   date: string;
   service: string;
   platform: 'Client Survey' | 'Phone Review' | 'Email Feedback';
-  url?: string;
+  url: string;
 }
 
 export default function ReviewWidget() {
@@ -175,9 +175,13 @@ export default function ReviewWidget() {
             <div className="px-12">
               {/* Platform Badge */}
               <div className="flex justify-center mb-4">
-                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getPlatformColor(current.platform)} bg-gray-100`}>
+                <a 
+                  href={current.url}
+                  className={`px-3 py-1 rounded-full text-sm font-semibold ${getPlatformColor(current.platform)} bg-gray-100 hover:bg-gray-200 transition-colors inline-flex items-center gap-1`}
+                >
                   {current.platform} Review
-                </span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
               </div>
 
               {/* Stars */}
