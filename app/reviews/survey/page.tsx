@@ -38,10 +38,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Legal Document Service</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Email survey response</div>
                 <div>Professional Verification: Oklahoma Bar Association Member</div>
-                <div>Survey ID: CS-2024-156</div>
+                <div>Survey ID: CS-2025-156</div>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Court Document Process Serving</div>
-                <div>Date: January 2025</div>
+                <div>Date: July 2025</div>
                 <div>Collection Method: Judicial survey response</div>
                 <div>Professional Verification: Tulsa County District Judge</div>
                 <div>Survey ID: CS-2025-012</div>
@@ -104,10 +104,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Law Firm Process Serving Support</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Professional survey response</div>
                 <div>Professional Verification: Oklahoma Bar Association Member</div>
-                <div>Survey ID: CS-2024-143</div>
+                <div>Survey ID: CS-2025-143</div>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Civil Process Serving Support</div>
-                <div>Date: January 2025</div>
+                <div>Date: July 2025</div>
                 <div>Collection Method: Law enforcement survey</div>
                 <div>Professional Verification: Rogers County Sheriff&apos;s Office</div>
                 <div>Survey ID: CS-2025-008</div>
@@ -170,10 +170,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Multiple Legal Document Services</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Professional survey response</div>
                 <div>Professional Verification: Certified Paralegal</div>
-                <div>Survey ID: CS-2024-139</div>
+                <div>Survey ID: CS-2025-139</div>
               </div>
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Insurance Legal Document Service</div>
-                <div>Date: January 2025</div>
+                <div>Date: July 2025</div>
                 <div>Collection Method: Corporate survey response</div>
                 <div>Professional Verification: Licensed Insurance Adjuster</div>
                 <div>Survey ID: CS-2025-004</div>
@@ -236,10 +236,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Court Filing and Process Serving</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Court staff survey</div>
                 <div>Professional Verification: Creek County Court Clerk</div>
-                <div>Survey ID: CS-2024-135</div>
+                <div>Survey ID: CS-2025-135</div>
               </div>
             </div>
           </div>
@@ -269,7 +269,7 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Courthouse Process Serving</div>
-                <div>Date: January 2025</div>
+                <div>Date: July 2025</div>
                 <div>Collection Method: Court security survey</div>
                 <div>Professional Verification: Wagoner County Bailiff</div>
                 <div>Survey ID: CS-2025-001</div>
@@ -302,10 +302,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Law Firm Support Services</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Professional survey response</div>
                 <div>Professional Verification: Legal Secretary Certification</div>
-                <div>Survey ID: CS-2024-131</div>
+                <div>Survey ID: CS-2025-131</div>
               </div>
             </div>
           </div>
@@ -335,7 +335,7 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Small Claims Court Process Serving</div>
-                <div>Date: January 2025</div>
+                <div>Date: July 2025</div>
                 <div>Collection Method: Judicial survey response</div>
                 <div>Professional Verification: Osage County Magistrate</div>
                 <div>Survey ID: CS-2025-016</div>
@@ -368,10 +368,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Real Estate Litigation Process Serving</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Professional survey response</div>
                 <div>Professional Verification: Oklahoma Real Estate License</div>
-                <div>Survey ID: CS-2024-127</div>
+                <div>Survey ID: CS-2025-127</div>
               </div>
             </div>
           </div>
@@ -401,7 +401,7 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Professional Liability Process Serving</div>
-                <div>Date: January 2025</div>
+                <div>Date: July 2025</div>
                 <div>Collection Method: Professional survey response</div>
                 <div>Professional Verification: Certified Public Accountant</div>
                 <div>Survey ID: CS-2025-020</div>
@@ -434,10 +434,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Banking Litigation Process Serving</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Corporate survey response</div>
                 <div>Professional Verification: Licensed Banking Professional</div>
-                <div>Survey ID: CS-2024-123</div>
+                <div>Survey ID: CS-2025-123</div>
               </div>
             </div>
           </div>
@@ -467,7 +467,7 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Healthcare Litigation Process Serving</div>
-                <div>Date: January 2025</div>
+                <div>Date: July 2025</div>
                 <div>Collection Method: Healthcare survey response</div>
                 <div>Professional Verification: Healthcare Administration License</div>
                 <div>Survey ID: CS-2025-024</div>
@@ -500,10 +500,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Construction Litigation Process Serving</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Professional survey response</div>
                 <div>Professional Verification: Licensed Professional Engineer</div>
-                <div>Survey ID: CS-2024-119</div>
+                <div>Survey ID: CS-2025-119</div>
               </div>
             </div>
           </div>
@@ -533,7 +533,7 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Municipal Litigation Process Serving</div>
-                <div>Date: January 2025</div>
+                <div>Date: July 2025</div>
                 <div>Collection Method: Government survey response</div>
                 <div>Professional Verification: Tulsa County Government</div>
                 <div>Survey ID: CS-2025-028</div>
@@ -566,10 +566,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Title Dispute Process Serving</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Business survey response</div>
                 <div>Professional Verification: Licensed Title Company</div>
-                <div>Survey ID: CS-2024-115</div>
+                <div>Survey ID: CS-2025-115</div>
               </div>
             </div>
           </div>
@@ -599,7 +599,7 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Arbitration Document Process Serving</div>
-                <div>Date: January 2025</div>
+                <div>Date: July 2025</div>
                 <div>Collection Method: Professional survey response</div>
                 <div>Professional Verification: Certified Arbitrator</div>
                 <div>Survey ID: CS-2025-032</div>
@@ -632,10 +632,10 @@ export default function ClientSurveyValidation() {
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Family Mediation Process Serving</div>
-                <div>Date: December 2024</div>
+                <div>Date: June 2025</div>
                 <div>Collection Method: Professional survey response</div>
                 <div>Professional Verification: Certified Family Mediator</div>
-                <div>Survey ID: CS-2024-111</div>
+                <div>Survey ID: CS-2025-111</div>
               </div>
             </div>
           </div>
