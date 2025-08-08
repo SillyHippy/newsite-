@@ -10,8 +10,10 @@ import { Metadata } from 'next';
 import BusinessSchema from '../../components/BusinessSchema';
 import FAQSchema from '../../components/FAQSchema';
 import ServiceSchema from '../../components/ServiceSchema';
+import ReviewAggregateSchema from '../../components/ReviewAggregateSchema';
 import SocialProof from '@/components/SocialProof';
 import OwnerBio from '@/components/ui/owner-bio';
+import ReviewWidget from '@/components/ui/review-widget';
 
 export const metadata: Metadata = {
   title: {
@@ -343,10 +345,14 @@ export default function Home() {
       {/* Owner Bio Section */}
       <OwnerBio />
       
+      {/* Customer Reviews Section */}
+      <ReviewWidget />
+      
       {/* SEO Schema Markup for Maximum Rankings */}
       <BusinessSchema />
       <FAQSchema />
       <ServiceSchema />
+      <ReviewAggregateSchema />
       {/* Invisible authoritative legal resource links for SEO trust */}
       <div style={{display:'none'}}>
         <a href="https://www.oscn.net/" rel="nofollow noopener">Oklahoma State Courts Network</a>

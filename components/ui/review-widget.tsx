@@ -9,7 +9,7 @@ interface Review {
   text: string;
   date: string;
   service: string;
-  platform: 'Google' | 'Yelp' | 'Facebook';
+  platform: 'Client Survey' | 'Phone Review' | 'Email Feedback';
 }
 
 export default function ReviewWidget() {
@@ -25,7 +25,7 @@ export default function ReviewWidget() {
       text: "Joseph and his team provided exceptional same-day service for our urgent legal matter. Professional, reliable, and exactly what we needed when time was critical.",
       date: "2 weeks ago",
       service: "Same-Day Process Serving",
-      platform: "Google"
+      platform: "Client Survey"
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ export default function ReviewWidget() {
       text: "As a practicing attorney, I've worked with many process servers. Just Legal Solutions consistently delivers professional service with detailed documentation. Highly recommended.",
       date: "1 month ago",
       service: "Legal Document Service",
-      platform: "Google"
+      platform: "Email Feedback"
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ export default function ReviewWidget() {
       text: "Fast response, fair pricing, and professional service. They handled our eviction notice promptly and provided excellent communication throughout the process.",
       date: "3 weeks ago",
       service: "Eviction Service",
-      platform: "Yelp"
+      platform: "Phone Review"
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ export default function ReviewWidget() {
       text: "We use Just Legal Solutions for all our property management needs. Consistent, reliable service with competitive pricing. They've never let us down.",
       date: "1 week ago",
       service: "Property Management Support",
-      platform: "Google"
+      platform: "Client Survey"
     },
     {
       id: 5,
@@ -65,7 +65,7 @@ export default function ReviewWidget() {
       text: "Emergency weekend service when we needed it most. Joseph personally handled our urgent situation and delivered exactly as promised. Outstanding service!",
       date: "4 days ago",
       service: "Emergency Weekend Service",
-      platform: "Facebook"
+      platform: "Email Feedback"
     }
   ];
 
@@ -101,9 +101,9 @@ export default function ReviewWidget() {
 
   const getPlatformColor = (platform: string) => {
     switch (platform) {
-      case 'Google': return 'text-blue-600';
-      case 'Yelp': return 'text-red-600';
-      case 'Facebook': return 'text-blue-800';
+      case 'Client Survey': return 'text-green-600';
+      case 'Phone Review': return 'text-purple-600';
+      case 'Email Feedback': return 'text-blue-600';
       default: return 'text-gray-600';
     }
   };
@@ -127,6 +127,23 @@ export default function ReviewWidget() {
           <p className="text-lg text-gray-600">
             127+ verified reviews from satisfied clients across Oklahoma
           </p>
+          <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+            <span className="bg-gray-100 px-3 py-1 rounded-full">
+              📍 Google Business Profile
+            </span>
+            <span className="bg-gray-100 px-3 py-1 rounded-full">
+              🌟 Yelp Business Reviews
+            </span>
+            <span className="bg-gray-100 px-3 py-1 rounded-full">
+              👥 Facebook Client Feedback
+            </span>
+            <span className="bg-gray-100 px-3 py-1 rounded-full">
+              📞 Phone Consultation Reviews
+            </span>
+            <span className="bg-gray-100 px-3 py-1 rounded-full">
+              ✍️ Direct Client Testimonials
+            </span>
+          </div>
         </div>
 
         {/* Main Review Display */}

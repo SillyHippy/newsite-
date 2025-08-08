@@ -56,7 +56,7 @@ export default function ServiceSchema({
             "name": "Standard Process Serving",
             "description": "Professional legal document delivery within 5-7 business days"
           },
-          "price": "60",
+          "price": "30",
           "priceCurrency": "USD"
         },
         {
@@ -66,7 +66,7 @@ export default function ServiceSchema({
             "name": "Rush Process Serving",
             "description": "Expedited legal document delivery within 24-48 hours"
           },
-          "price": "100",
+          "price": "75",
           "priceCurrency": "USD"
         },
         {
@@ -76,7 +76,17 @@ export default function ServiceSchema({
             "name": "Same-Day Process Serving",
             "description": "Emergency legal document delivery within same business day"
           },
-          "price": "150",
+          "price": "100",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "name": "Complex/Difficult Serves",
+            "description": "Specialized process serving for challenging cases or hard-to-locate individuals"
+          },
+          "price": "200",
           "priceCurrency": "USD"
         }
       ]
