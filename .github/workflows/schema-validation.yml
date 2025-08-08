@@ -1,0 +1,17 @@
+name: Schema Markup Validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate Schema Markup
+        uses: johnnyreilly/schemar@v0.1.1
+        with:
+          urls: |
+            https://justlegalsolutions.org
+            https://justlegalsolutions.org/sitemap.xml

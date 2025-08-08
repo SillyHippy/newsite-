@@ -1,0 +1,49 @@
+name: Content Velocity Automation
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Daily at 9 AM
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  content-generation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Content Generation
+        run: |
+          echo "🚀 Starting Content Velocity Automation..."
+          node scripts/content-velocity-automation.js
+
+      - name: Git Configuration
+        run: |
+          git config --global user.name 'Content Velocity Bot'
+          git config --global user.email 'seo@justlegalsolutions.org'
+
+      - name: Commit New Content
+        run: |
+          git add .
+          git pull origin main
+          git commit -m "🚀 Daily Content Generation - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push origin main
+
+      - name: Content Generation Complete
+        run: |
+          echo "✅ Content Velocity Automation Complete"
+          echo "📝 New blog post created"
+          echo "🎯 Long-tail keywords targeted"
+          echo "📅 Content calendar updated"

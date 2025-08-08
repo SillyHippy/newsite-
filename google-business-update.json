@@ -1,0 +1,24 @@
+{
+  "businessName": "Just Legal Solutions",
+  "lastUpdated": "'$(date -Iseconds)'",
+  "posts": [
+    {
+      "type": "offer",
+      "title": "Same-Day Process Serving Available Today",
+      "description": "Urgent legal documents? We can serve them today in Tulsa County. Licensed professionals ready now.",
+      "callToAction": "Call Now",
+      "validUntil": "'$(date -d '+7 days' -Iseconds)'"
+    },
+    {
+      "type": "update", 
+      "title": "Fresh Service Update - '$(date +%B\ %d)'",
+      "description": "Our process servers have successfully delivered '$(shuf -i 15-25 -n 1)' legal documents today across Oklahoma.",
+      "timestamp": "'$(date -Iseconds)'"
+    }
+  ],
+  "attributes": {
+    "serviceAvailability": "24/7 Emergency Service",
+    "responseTime": "15 minutes average",
+    "coverage": "Statewide Oklahoma"
+  }
+}

@@ -80,3 +80,141 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom image positioning for service cards */
+@layer utilities {
+  .object-position-upper-center {
+    object-position: 50% 30%;
+  }
+  
+  .object-position-same-day {
+    object-position: 50% 30%;
+  }
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+  /* Reduce complexity for mobile */
+  * {
+    will-change: auto !important;
+  }
+  
+  /* Optimize images for mobile */
+  img {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+  }
+  
+  /* Reduce shadow complexity on mobile */
+  [class*="shadow-[0_0_"] {
+    box-shadow: none !important;
+  }
+  
+  /* Disable hover effects on touch devices */
+  .hover\:shadow-\[0_0_25px_rgba\(255\,255\,255\,0\.5\)\]:hover,
+  .hover\:shadow-\[0_0_30px_rgba\(255\,255\,255\,0\.6\)\]:hover {
+    box-shadow: none !important;
+  }
+  
+  /* Optimize animations for mobile */
+  * {
+    animation-duration: 0.1s !important;
+    transition-duration: 0.1s !important;
+  }
+  
+  /* Optimize text rendering */
+  body {
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+  
+  /* Reduce reflows */
+  section {
+    contain: layout style;
+  }
+}
+
+/* Critical above-the-fold optimizations */
+@media (max-width: 768px) {
+  /* Hero section mobile optimizations */
+  section[aria-label="Hero section"] {
+    height: 100vh !important;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Reduce layout shifts */
+  .relative {
+    contain: layout;
+  }
+  
+  /* Optimize hero image */
+  section[aria-label="Hero section"] img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Prefers reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Connection-aware optimizations */
+.slow-connection * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.slow-connection img {
+  filter: none !important;
+}
+
+/* Low memory device optimizations */
+.low-memory * {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Low battery optimizations */
+.low-battery * {
+  animation-play-state: paused !important;
+}
+
+/* Touch target optimization */
+@media (pointer: coarse) {
+  button,
+  a,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Critical loading states */
+.loading-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

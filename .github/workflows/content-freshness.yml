@@ -1,0 +1,54 @@
+name: Content Optimization & Freshness
+
+on:
+  schedule:
+    # Every 3 days - Content freshness updates
+    - cron: '0 14 */3 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  content-optimization:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Use Node.js version 20 to prevent engine warnings
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update sitemap with new cities
+        run: node scripts/update-sitemap.js
+
+      - name: Validate all schema markup
+        run: node scripts/validate-schema.js
+
+      - name: Optimize internal linking
+        run: node scripts/optimize-internal-links.js
+
+      - name: Update FAQ content
+        run: node scripts/update-faq-content.js
+
+      - name: Update business schema with fresh data
+        run: node scripts/update-business-schema.js
+
+      - name: Commit content updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No content changes to commit"
+          else
+            git commit -m "🔄 Content freshness update - $(date +'%Y-%m-%d')"
+            git push
+          fi

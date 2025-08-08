@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -41,10 +42,10 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
-              src="https://raw.githubusercontent.com/SillyHippy/BOLT-SITE/refs/heads/main/public/images/jls-logo.webp" 
+              src="/favicon1.svg" 
               alt="JLS Logo" 
-              width={100} 
-              height={100}
+              width={60} 
+              height={60}
               className="object-contain"
               priority
             />
@@ -65,6 +66,9 @@ export function Navbar() {
             >
               Courier Services
             </a>
+            <Link href="/services" className="text-gray-700 hover:text-gray-900">
+              Business Solutions
+            </Link>
             <Link href="/payments" className="text-gray-700 hover:text-gray-900">
               Payments
             </Link>
@@ -144,6 +148,13 @@ export function Navbar() {
               Courier Services
             </a>
             <Link
+              href="/services"
+              className="px-6 py-3 text-gray-700 hover:bg-gray-100"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Business Solutions
+            </Link>
+            <Link
               href="/payments"
               className="px-6 py-3 text-gray-700 hover:bg-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -170,3 +181,6 @@ export function Navbar() {
     </nav>
   );
 }
+
+// Default export for compatibility
+export default Navbar;

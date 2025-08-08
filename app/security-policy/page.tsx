@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { Navbar } from '@/components/ui/navbar';
+import { Footer } from '@/components/ui/footer';
 
 export const metadata: Metadata = {
   title: 'Security Policy',
@@ -11,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function SecurityPolicyPage() {
   return (
-    <main className="min-h-screen py-16 px-4">
+    <main className="min-h-screen py-16 px-4 mt-12">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Security Policy</h1>
         <div className="prose max-w-none">
@@ -20,7 +22,7 @@ export default function SecurityPolicyPage() {
           </p>
           <h2 className="text-2xl font-semibold mt-8 mb-4">Reporting Security Issues</h2>
           <p className="mb-4">
-            If you discover a security vulnerability, please report it to Info@JustLegalSolutions.org. We will investigate all legitimate reports and do our best to quickly fix the problem.
+            If you discover a security vulnerability, please report it to info@justlegalsolutions.org. We will investigate all legitimate reports and do our best to quickly fix the problem.
           </p>
           <h2 className="text-2xl font-semibold mt-8 mb-4">Security Measures</h2>
           <ul className="list-disc pl-6 mb-4">
@@ -31,6 +33,8 @@ export default function SecurityPolicyPage() {
           </ul>
         </div>
       </div>
+      <Navbar />
+      <Footer />
     </main>
   );
 }

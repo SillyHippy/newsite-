@@ -1,0 +1,53 @@
+
+name: SEO Automation - Safe & Compliant
+
+on:
+  schedule:
+    - cron: '0 14 * * 3'  # Weekly on Wednesday at 2 PM UTC (safe timing)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  safe-seo-optimization:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Safe SEO Content Update
+      run: |
+        # Conservative, quality-focused SEO updates
+        echo "🔍 Safe SEO Automation - $(date)" >> seo-safe-log.txt
+        
+        # Only update robots.txt weekly (not daily)
+        if [ ! -f "robots-last-update.txt" ] || [ $(find robots-last-update.txt -mtime +7) ]; then
+          echo "# Last updated: $(date)" >> public/robots.txt
+          echo "$(date)" > robots-last-update.txt
+          echo "✅ Weekly robots.txt update"
+        else
+          echo "⏳ Robots.txt recently updated - maintaining natural patterns"
+        fi
+        
+        echo "✅ Safe SEO optimization completed"
+        
+    - name: Commit conservative changes
+      run: |
+        git config --local user.email "seo@justlegalsolutions.org"
+        git config --local user.name "Safe SEO Bot"
+        git add .
+        if git diff --staged --quiet; then
+          echo "No changes to commit - following natural patterns"
+        else
+          git commit -m "🔍 Weekly SEO maintenance - $(date +%Y-%m-%d)"
+          git push
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

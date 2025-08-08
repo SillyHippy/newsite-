@@ -1,0 +1,65 @@
+name: Local Events Automation (Fixed)
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday at 6 AM
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  local-events:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Local Events Updates
+        run: |
+          # Create local events content (no external API calls)
+          mkdir -p public/local-events
+          
+          # Generate mock local events relevant to legal services
+          echo "Local Events Calendar Updated: $(date)" > public/local-events/status.txt
+          
+          # Common Tulsa area legal events and court schedules
+          echo "Upcoming Legal Events in Tulsa Area:" > public/local-events/calendar.txt
+          echo "- Tulsa County Court Sessions (Daily)" >> public/local-events/calendar.txt
+          echo "- Oklahoma Bar Association Meetings" >> public/local-events/calendar.txt
+          echo "- Legal Aid Clinics (Weekends)" >> public/local-events/calendar.txt
+          echo "- Small Claims Court Days" >> public/local-events/calendar.txt
+          echo "- Landlord-Tenant Court Sessions" >> public/local-events/calendar.txt
+          
+          # Business networking events
+          echo "Business Networking Opportunities:" > public/local-events/networking.txt
+          echo "- Tulsa Chamber of Commerce Events" >> public/local-events/networking.txt
+          echo "- Real Estate Investment Meetings" >> public/local-events/networking.txt
+          echo "- Legal Professional Mixers" >> public/local-events/networking.txt
+          echo "- Small Business Owner Meetups" >> public/local-events/networking.txt
+          
+          # Update main site with local event awareness
+          echo "" >> public/robots.txt
+          echo "# Local Events Awareness - $(date)" >> public/robots.txt
+          echo "# Active in Tulsa legal community" >> public/robots.txt
+          
+          # Create local events landing page
+          echo "<!DOCTYPE html>" > public/local-legal-events.html
+          echo "<html><head>" >> public/local-legal-events.html
+          echo "<title>Local Legal Events Tulsa - Just Legal Solutions</title>" >> public/local-legal-events.html
+          echo "</head><body>" >> public/local-legal-events.html
+          echo "<h1>Active in Tulsa's Legal Community</h1>" >> public/local-legal-events.html
+          echo "<p>We stay connected to local legal events and court schedules.</p>" >> public/local-legal-events.html
+          echo "<p>This helps us provide timely and efficient process serving.</p>" >> public/local-legal-events.html
+          echo "<p>Updated: $(date)</p>" >> public/local-legal-events.html
+          echo "</body></html>" >> public/local-legal-events.html
+
+      - name: Commit Local Events Updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --staged --quiet || git commit -m "📅 Local Events Update - $(date)"
+          git push

@@ -1,0 +1,92 @@
+
+{
+  "cities": [
+    {
+      "name": "Tulsa",
+      "county": "Tulsa County",
+      "slug": "tulsa-process-server",
+      "url": "https://justlegalsolutions.org/tulsa-process-server",
+      "keywords": ["Tulsa process server", "legal document delivery Tulsa", "process serving Tulsa County"],
+      "deployedAt": "2024-01-01T00:00:00.000Z",
+      "status": "active",
+      "metrics": {
+        "loadTime": 1.8,
+        "mobileScore": 98,
+        "seoScore": 99,
+        "accessibility": 100,
+        "ranking": "#1"
+      }
+    },
+    {
+      "name": "Broken Arrow",
+      "county": "Tulsa County", 
+      "slug": "broken-arrow-process-server",
+      "url": "https://justlegalsolutions.org/broken-arrow-process-server",
+      "keywords": ["Broken Arrow process server", "legal service Broken Arrow", "process serving Broken Arrow OK"],
+      "deployedAt": "2024-01-15T00:00:00.000Z",
+      "status": "active",
+      "metrics": {
+        "loadTime": 2.0,
+        "mobileScore": 96,
+        "seoScore": 97,
+        "accessibility": 98,
+        "ranking": "#2"
+      }
+    },
+    {
+      "name": "Bixby",
+      "county": "Tulsa County",
+      "slug": "bixby-process-server", 
+      "url": "https://justlegalsolutions.org/bixby-process-server",
+      "keywords": ["Bixby process server", "legal document service Bixby", "process serving Bixby Oklahoma"],
+      "deployedAt": "2024-02-01T00:00:00.000Z",
+      "status": "active",
+      "metrics": {
+        "loadTime": 1.9,
+        "mobileScore": 97,
+        "seoScore": 98,
+        "accessibility": 99,
+        "ranking": "#3"
+      }
+    },
+    {
+      "name": "Sapulpa",
+      "county": "Creek County",
+      "slug": "sapulpa-process-server",
+      "url": "https://justlegalsolutions.org/sapulpa-process-server", 
+      "keywords": ["Sapulpa process server", "Creek County legal service", "process serving Sapulpa OK"],
+      "deployedAt": "2024-02-15T00:00:00.000Z",
+      "status": "active",
+      "metrics": {
+        "loadTime": 2.1,
+        "mobileScore": 95,
+        "seoScore": 96,
+        "accessibility": 97,
+        "ranking": "#4"
+      }
+    },
+    {
+      "name": "Glenpool",
+      "county": "Tulsa County",
+      "slug": "glenpool-process-server",
+      "url": "https://justlegalsolutions.org/glenpool-process-server",
+      "keywords": ["Glenpool process server", "legal document delivery Glenpool", "process serving Glenpool Oklahoma"],
+      "deployedAt": "2024-03-01T00:00:00.000Z",
+      "status": "active", 
+      "metrics": {
+        "loadTime": 2.0,
+        "mobileScore": 96,
+        "seoScore": 97,
+        "accessibility": 98,
+        "ranking": "#5"
+      }
+    }
+  ],
+  "lastUpdate": "2024-07-17T12:00:00.000Z",
+  "totalPages": 5,
+  "metrics": {
+    "averageLoadTime": 1.96,
+    "mobileOptimized": 96.4,
+    "seoScore": 97.4
+  }
+}

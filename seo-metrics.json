@@ -1,0 +1,16 @@
+{
+  "lastCheck": "2025-07-13T14:32:20.187Z",
+  "sitemap": {
+    "status": "valid",
+    "lastUpdate": "2025-07-13T14:32:20.394Z"
+  },
+  "indexNow": {
+    "lastSubmission": "2025-07-13T14:32:20.578Z",
+    "status": "failed"
+  },
+  "performance": {
+    "loadTime": 0,
+    "ctr": 0,
+    "impressions": 0
+  }
+}

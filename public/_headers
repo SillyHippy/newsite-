@@ -1,0 +1,29 @@
+# _headers file for Cloudflare Pages
+
+# These security headers apply to ALL pages across your entire site
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Robots-Tag: index, follow
+
+# Cache CSS/JS files for 1 year because they have unique names (versioning)
+/_next/static/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/_next/static/js/*
+  Cache-control: public, max-age=31536000, immutable
+
+# Cache static images for 1 year
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache sitemap for 6 hours
+/sitemap.xml
+  Cache-Control: public, max-age=21600
+  Content-Type: application/xml; charset=utf-8
+
+# SEO pages get special caching
+/seo/*
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: index, follow, max-snippet:-1, max-image-preview:large

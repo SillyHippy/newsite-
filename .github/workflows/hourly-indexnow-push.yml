@@ -1,0 +1,42 @@
+name: Hourly IndexNow Push
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  indexnow-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Notify Search Engines
+        run: |
+          echo "🔔 Notifying search engines of updates..."
+          
+          # IndexNow notification for key pages
+          KEY_URLS=(
+            "https://justlegalsolutions.org/"
+            "https://justlegalsolutions.org/tulsa-process-server/"
+            "https://justlegalsolutions.org/process-server-tulsa/"
+            "https://justlegalsolutions.org/seo/same-day-process-serving-tulsa/"
+            "https://justlegalsolutions.org/seo/process-server-tulsa/"
+          )
+          
+          for url in "${KEY_URLS[@]}"; do
+            echo "Pinging: $url"
+            curl -X POST "https://api.indexnow.org/indexnow" \
+              -H "Content-Type: application/json" \
+              -d "{\"host\":\"justlegalsolutions.org\",\"key\":\"seo-boost\",\"keyLocation\":\"https://justlegalsolutions.org/seo-boost.txt\",\"urlList\":[\"$url\"]}" \
+              || echo "IndexNow ping failed for $url"
+          done
+          
+          # Ping Google sitemap
+          curl "https://www.google.com/ping?sitemap=https://justlegalsolutions.org/sitemap.xml" || echo "Google sitemap ping failed"
+          
+          # Ping Bing sitemap  
+          curl "https://www.bing.com/ping?sitemap=https://justlegalsolutions.org/sitemap.xml" || echo "Bing sitemap ping failed"
+          
+          echo "✅ Search engine notifications completed"

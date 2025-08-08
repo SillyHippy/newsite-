@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a process server do in Oklahoma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A process server in Oklahoma delivers legal documents such as summons, subpoenas, and court orders to individuals or businesses. They provide proof of service through detailed affidavits required by Oklahoma courts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does process serving cost in Tulsa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Process serving in Tulsa offers competitive pricing with multiple service levels available. Visit justlegalsolutions.org/pricing for current rates and service options. All pricing is transparent with no hidden fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does process serving take in Oklahoma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Process serving in Oklahoma typically takes 3-5 business days for standard service, 24-48 hours for rush service, and can be completed the same day for urgent documents. Time varies based on recipient availability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What documents can a process server deliver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Process servers can deliver divorce papers, summons and complaints, subpoenas, eviction notices, small claims documents, court orders, and other legal documents requiring official service."
+      }
+    }
+  ]
+}

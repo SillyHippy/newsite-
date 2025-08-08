@@ -1,0 +1,17 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Just Legal Solutions",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {
+      "street": "Tulsa, OK",
+      "city": "Tulsa",
+      "state": "OK",
+      "zip": "74101"
+    },
+    "addressCountry": "US"
+  },
+  "telephone": "(539) 367-6832",
+  "url": "https://justlegalsolutions.org"
+}

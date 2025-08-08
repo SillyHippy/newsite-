@@ -1,0 +1,82 @@
+name: Emergency Page Cleanup - Prevent Google Penalty
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+jobs:
+  emergency-cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Emergency SEO Page Cleanup
+        run: |
+          echo "🚨 EMERGENCY: Cleaning up mass-generated pages to prevent Google penalty"
+          echo "======================================================================="
+          
+          # Count current SEO pages
+          seo_count=$(find app/\(main\)/seo -name "page.tsx" | wc -l)
+          echo "Current SEO pages: $seo_count"
+          
+          # Keep only the highest quality pages (manual selection)
+          echo "Keeping only essential, high-quality pages:"
+          
+          # Create a temporary directory for pages to keep
+          mkdir -p temp_keep_pages
+          
+          # Keep these essential pages (manually selected for quality)
+          essential_pages=(
+            "tulsa-process-server-comprehensive"
+            "process-server-tulsa"
+            "same-day-process-serving-tulsa"
+            "process-serving-faq"
+            "what-is-a-process-server"
+            "subpoena-service"
+          )
+          
+          for page in "${essential_pages[@]}"; do
+            if [ -d "app/(main)/seo/$page" ]; then
+              cp -r "app/(main)/seo/$page" "temp_keep_pages/"
+              echo "✅ Kept: $page (high quality)"
+            fi
+          done
+          
+          # Remove all SEO pages
+          rm -rf app/\(main\)/seo/*/
+          
+          # Restore only the essential pages
+          mv temp_keep_pages/* app/\(main\)/seo/
+          rmdir temp_keep_pages
+          
+          final_count=$(find app/\(main\)/seo -name "page.tsx" | wc -l)
+          echo "Final SEO pages: $final_count"
+          echo "Removed: $((seo_count - final_count)) pages"
+          
+          # Update robots.txt to be more conservative
+          echo "User-agent: *" > public/robots.txt
+          echo "Allow: /" >> public/robots.txt
+          echo "Crawl-delay: 1" >> public/robots.txt
+          echo "" >> public/robots.txt
+          echo "# Conservative approach - reduced page count to prevent penalties" >> public/robots.txt
+          echo "# Following Google's Scaled Content Abuse policy" >> public/robots.txt
+          echo "Sitemap: https://justlegalsolutions.org/sitemap.xml" >> public/robots.txt
+          
+          echo "🛡️ Emergency cleanup complete - reduced penalty risk"
+          
+      - name: Set up GitHub credentials
+        run: |
+          git config --global user.name "emergency-cleanup-bot"
+          git config --global user.email "info@justlegalsolutions.org"
+          
+      - name: Commit Emergency Cleanup
+        run: |
+          git add .
+          git diff --staged --quiet || git commit -m "🚨 Emergency SEO Cleanup: Removed mass-generated pages to prevent Google penalty"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

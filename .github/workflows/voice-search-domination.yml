@@ -1,0 +1,55 @@
+name: Voice Search Domination
+
+on:
+  schedule:
+    - cron: '30 */4 * * *'  # Every 4 hours, offset by 30 minutes
+  workflow_dispatch:
+
+jobs:
+  voice-search-boost:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Voice Search Optimization
+        run: |
+          echo "🎙️ VOICE SEARCH DOMINATION ACTIVATED"
+          echo "===================================="
+          
+          # Run voice search optimization script
+          if [ -f "scripts/voice-search-optimization.js" ]; then
+            node scripts/voice-search-optimization.js
+            echo "✅ Voice search optimization completed"
+          fi
+          
+          # Update voice search schema
+          echo "🗣️ Updating voice search schema..."
+          current_date=$(date +%Y-%m-%d)
+          
+          # Create voice search optimization markers
+          echo "<!-- Voice Search Optimized: $current_date -->" >> public/voice-search-marker.html
+          
+          echo "✅ Voice search domination complete"
+          
+      - name: Set up GitHub credentials
+        run: |
+          git config --global user.name "voice-search-bot"
+          git config --global user.email "info@justlegalsolutions.org"
+          
+      - name: Commit Voice Search Updates
+        run: |
+          git add .
+          git diff --staged --quiet || git commit -m "🎙️ Voice Search Domination: $(date '+%Y-%m-%d %H:%M UTC')"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,3 @@
+Workflow triggered: 2025-07-13T23:46:15.493Z
+Workflow: ⚡ Core Web Vitals Monitoring
+Description: Performance optimization and monitoring

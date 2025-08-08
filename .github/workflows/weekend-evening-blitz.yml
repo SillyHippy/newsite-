@@ -1,0 +1,60 @@
+name: Weekend Evening Blitz (Fixed)
+
+on:
+  schedule:
+    - cron: '0 19 * * 5,6'  # 7 PM on Friday and Saturday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  weekend-blitz:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Weekend Evening Ranking Pressure
+        run: |
+          # Create weekend-specific content updates
+          mkdir -p public/weekend-blitz
+          
+          # Time-based ranking signals
+          current_time=$(date '+%Y-%m-%d %H:%M:%S')
+          day_of_week=$(date '+%A')
+          
+          echo "Weekend Blitz Active: $current_time" > public/weekend-blitz/status.txt
+          echo "Day: $day_of_week" >> public/weekend-blitz/status.txt
+          
+          # Weekend keyword focus areas
+          echo "🎯 Weekend Focus Keywords:" > public/weekend-blitz/keywords.txt
+          echo "- urgent process server tulsa" >> public/weekend-blitz/keywords.txt
+          echo "- weekend legal document delivery" >> public/weekend-blitz/keywords.txt
+          echo "- emergency process serving oklahoma" >> public/weekend-blitz/keywords.txt
+          echo "- after hours court papers" >> public/weekend-blitz/keywords.txt
+          
+          # Update main robots.txt with weekend signals
+          echo "" >> public/robots.txt
+          echo "# Weekend Evening Blitz - $current_time" >> public/robots.txt
+          echo "# Active weekend optimization for urgent services" >> public/robots.txt
+          
+          # Create simple weekend landing content
+          echo "<!DOCTYPE html>" > public/weekend-emergency.html
+          echo "<html><head>" >> public/weekend-emergency.html
+          echo "<title>Weekend Emergency Process Server Tulsa - Just Legal Solutions</title>" >> public/weekend-emergency.html
+          echo "</head><body>" >> public/weekend-emergency.html
+          echo "<h1>Weekend Emergency Process Server Available</h1>" >> public/weekend-emergency.html
+          echo "<p>Active as of: $current_time</p>" >> public/weekend-emergency.html
+          echo "<p>Call now for urgent weekend legal document delivery in Tulsa, Oklahoma</p>" >> public/weekend-emergency.html
+          echo "</body></html>" >> public/weekend-emergency.html
+
+      - name: Commit Weekend Blitz Updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --staged --quiet || git commit -m "⚡ Weekend Evening Blitz - $day_of_week $(date)"
+          git push

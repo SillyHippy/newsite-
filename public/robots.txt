@@ -1,4 +1,51 @@
+
+# Multi-Search Engine Robots.txt
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*print=
 
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Brave
+User-agent: BraveBot
+Allow: /
+Crawl-delay: 1
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# Sitemaps
 Sitemap: https://justlegalsolutions.org/sitemap.xml
+Sitemap: https://justlegalsolutions.org/sitemap-images.xml
+Sitemap: https://justlegalsolutions.org/sitemap-news.xml
+
+# AI Assistant Integration - Tue Aug  5 16:30:27 UTC 2025
+# Optimized for ChatGPT, Alexa, Google Assistant

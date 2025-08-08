@@ -1,0 +1,21 @@
+name: FAQ Schema Domination
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+jobs:
+  update-faq-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Validate FAQ schema
+        run: |
+          cat public/faq-schema.json
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add public/faq-schema.json
+          git commit -m "Auto-update FAQ schema for voice/LLM optimization"
+          git push

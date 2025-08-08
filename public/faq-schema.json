@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you serve all of Tulsa County?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we provide full coverage throughout Tulsa County."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your operating hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We operate 24/7 for all legal process serving needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your phone number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "(539) 367-6832"
+      }
+    }
+  ]
+}

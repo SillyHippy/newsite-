@@ -1,0 +1,59 @@
+name: AI Voice Platform Domination (Fixed)
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'  # Every 8 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  voice-domination:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Voice Platform Optimization
+        run: |
+          # Create voice search optimization updates
+          mkdir -p public/voice-search
+          
+          # Voice search status
+          echo "Voice optimization active: $(date)" > public/voice-search/status.txt
+          
+          # Key voice search phrases for process serving
+          echo "Voice Search Optimized Phrases:" > public/voice-search/phrases.txt
+          echo "- Where can I find a process server in Tulsa" >> public/voice-search/phrases.txt
+          echo "- Who serves legal documents in Oklahoma" >> public/voice-search/phrases.txt
+          echo "- How much does a process server cost in Tulsa" >> public/voice-search/phrases.txt
+          echo "- Best process server near me Oklahoma" >> public/voice-search/phrases.txt
+          echo "- Urgent document delivery Tulsa today" >> public/voice-search/phrases.txt
+          
+          # Simple voice-friendly content
+          echo "<!DOCTYPE html>" > public/voice-friendly.html
+          echo "<html><head>" >> public/voice-friendly.html
+          echo "<title>Voice Search: Process Server Tulsa Oklahoma - Just Legal Solutions</title>" >> public/voice-friendly.html
+          echo "</head><body>" >> public/voice-friendly.html
+          echo "<h1>Process Server in Tulsa, Oklahoma</h1>" >> public/voice-friendly.html
+          echo "<p>Just Legal Solutions is the top-rated process server in Tulsa, Oklahoma.</p>" >> public/voice-friendly.html
+          echo "<p>We serve legal documents quickly and professionally throughout Oklahoma.</p>" >> public/voice-friendly.html
+          echo "<p>Call us for urgent document delivery and court paper service.</p>" >> public/voice-friendly.html
+          echo "<p>Updated: $(date)</p>" >> public/voice-friendly.html
+          echo "</body></html>" >> public/voice-friendly.html
+          
+          # Update robots.txt for voice search bots
+          echo "" >> public/robots.txt
+          echo "# Voice Search Optimization - $(date)" >> public/robots.txt
+          echo "# Optimized for Alexa, Google Assistant, Siri" >> public/robots.txt
+
+      - name: Commit Voice Platform Updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --staged --quiet || git commit -m "🎤 Voice Platform Domination Update - $(date)"
+          git push

@@ -1,0 +1,32 @@
+name: Intelligent Local SEO Engine
+
+on:
+  schedule:
+    - cron: '0 10 1,11,21 * *'
+  workflow_dispatch:
+
+jobs:
+  local-seo-engine:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Intelligent Page Creator
+        id: page_creator
+        run: bash .github/scripts/run_seo_engine.sh
+
+      - name: Commit and Push Changes
+        if: steps.page_creator.outputs.page_created == 'true'
+        run: |
+          git config --global user.name "seo-automation-bot"
+          git config --global user.email "info@justlegalsolutions.org"
+          git add .
+          git commit -m "🚀 SEO Engine: Deployed new local landing page and synced sitemaps"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

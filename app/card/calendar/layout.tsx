@@ -1,7 +1,7 @@
+
 "use client";
 
 import React from 'react';
-import { Toaster } from '@/components/ui/toaster';
 
 export default function CalendarLayout({
   children,
@@ -11,7 +11,6 @@ export default function CalendarLayout({
   return (
     <>
       {children}
-      <Toaster />
     </>
   );
 }

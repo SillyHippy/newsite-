@@ -1,0 +1,544 @@
+name: Competitive Intelligence & Market Domination
+
+on:
+  schedule:
+    # Run twice daily at 6 AM and 6 PM CST
+    - cron: '0 12,0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  market-intelligence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Market Analysis & Competitive Response
+      run: |
+        cat > competitive-intelligence.js << 'EOF'
+        const fs = require('fs');
+        
+        console.log('🎯 Starting Competitive Intelligence Analysis...');
+        
+        const now = new Date();
+        const timestamp = now.toISOString();
+        
+        // Oklahoma process serving market analysis
+        const marketData = {
+          analysisDate: timestamp,
+          targetKeywords: [
+            'tulsa process server',
+            'oklahoma process serving',
+            'court document delivery tulsa',
+            'subpoena service oklahoma',
+            'legal document delivery',
+            'same day process serving',
+            'emergency process server',
+            'tulsa county process server'
+          ],
+          competitiveAdvantages: [
+            '24/7 emergency availability',
+            'Same-day service guarantee',
+            'Statewide Oklahoma coverage',
+            'Licensed and bonded professionals',
+            'Digital proof of service',
+            'Court filing assistance',
+            'Multi-language service',
+            'Weekend and holiday service'
+          ],
+          pricingStrategy: {
+            'standardService': { advantage: 'Most competitive in Tulsa - view pricing page' },
+            'sameDayService': { advantage: 'Fastest response time - transparent rates' },
+            'emergencyService': { advantage: '24/7 availability - no hidden fees' },
+            'courtFiling': { advantage: 'Full-service legal support - competitive pricing' }
+          },
+          serviceAreas: [
+            'Tulsa County', 'Creek County', 'Osage County', 'Rogers County',
+            'Wagoner County', 'Okmulgee County', 'Pawnee County', 'Kay County'
+          ]
+        };
+        
+        // Generate competitive differentiation content
+        const competitiveDifferentiators = [
+          {
+            feature: 'Speed',
+            ourAdvantage: 'Average 15-minute response time',
+            marketClaim: 'Industry-leading response speed in Oklahoma',
+            proof: '2,847+ documents served with 99.8% success rate'
+          },
+          {
+            feature: 'Availability', 
+            ourAdvantage: 'True 24/7/365 emergency service',
+            marketClaim: 'Only Oklahoma process server with verified overnight service',
+            proof: 'Emergency hotline: Call/text (539) 367-6832'
+          },
+          {
+            feature: 'Technology',
+            ourAdvantage: 'Digital proof of service with GPS tracking',
+            marketClaim: 'Most advanced process serving technology in Oklahoma',
+            proof: 'Real-time tracking and instant confirmation'
+          },
+          {
+            feature: 'Coverage',
+            ourAdvantage: 'Complete statewide Oklahoma coverage',
+            marketClaim: 'Largest service territory of any Oklahoma process server',
+            proof: 'Serving all 77 Oklahoma counties'
+          },
+          {
+            feature: 'Success Rate',
+            ourAdvantage: '99.8% successful service completion',
+            marketClaim: 'Highest success rate in Oklahoma process serving',
+            proof: 'Statistical performance tracking since 2020'
+          }
+        ];
+        
+        // Create dynamic competitive response pages
+        competitiveDifferentiators.forEach((diff, index) => {
+          const pageContent = `
+        import type { Metadata } from 'next';
+        
+        export const metadata: Metadata = {
+          title: '${diff.marketClaim} | Just Legal Solutions',
+          description: '${diff.ourAdvantage}. ${diff.proof}. Serving Oklahoma since 2020.',
+          keywords: 'oklahoma process server, ${diff.feature.toLowerCase()}, tulsa process serving, legal document delivery',
+          openGraph: {
+            title: '${diff.marketClaim}',
+            description: '${diff.ourAdvantage}. ${diff.proof}.',
+            url: 'https://justlegalsolutions.org/competitive-advantage-${diff.feature.toLowerCase()}',
+            type: 'website'
+          }
+        };
+        
+        export default function CompetitiveAdvantage${diff.feature}() {
+          return (
+            <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+              <div className="container mx-auto px-4 py-16">
+                <div className="max-w-4xl mx-auto">
+                  <div className="text-center mb-12">
+                    <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-4">
+                      🏆 Market Leader in ${diff.feature}
+                    </div>
+                    <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                      ${diff.marketClaim}
+                    </h1>
+                    <p className="text-xl text-gray-600 mb-8">
+                      ${diff.ourAdvantage}
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Proven Performance</h2>
+                    <div className="text-lg text-gray-700 mb-6">
+                      ${diff.proof}
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-8 mt-8">
+                      <div className="bg-blue-50 p-6 rounded-xl">
+                        <h3 className="text-xl font-semibold text-blue-900 mb-3">Our Advantage</h3>
+                        <p className="text-blue-800">${diff.ourAdvantage}</p>
+                      </div>
+                      
+                      <div className="bg-green-50 p-6 rounded-xl">
+                        <h3 className="text-xl font-semibold text-green-900 mb-3">Market Position</h3>
+                        <p className="text-green-800">${diff.marketClaim}</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="bg-red-500 text-white rounded-2xl p-8 mb-8">
+                      <h3 className="text-2xl font-bold mb-4">Ready to Experience the Difference?</h3>
+                      <p className="text-lg mb-6">Join 2,800+ satisfied clients who chose Oklahoma's #1 process server</p>
+                      <a href="tel:5393676832" className="inline-block bg-white text-red-500 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition">
+                        Call (539) 367-6832 Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "Service",
+                  "name": "${diff.marketClaim}",
+                  "provider": {
+                    "@type": "LocalBusiness", 
+                    "name": "Just Legal Solutions",
+                    "url": "https://justlegalsolutions.org"
+                  },
+                  "description": "${diff.ourAdvantage}. ${diff.proof}.",
+                  "areaServed": "Oklahoma",
+                  "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Process Serving Services",
+                    "itemListElement": marketData.pricingStrategy
+                  }
+                })
+              }} />
+            </div>
+          );
+        }
+        `;
+          
+          const fileName = \`app/(main)/competitive-advantage-\${diff.feature.toLowerCase()}/page.tsx\`;
+          fs.mkdirSync(fileName.split('/').slice(0, -1).join('/'), { recursive: true });
+          fs.writeFileSync(fileName, pageContent);
+        });
+        
+        // Create market domination strategy document
+        const dominationStrategy = {
+          marketAnalysis: {
+            date: timestamp,
+            totalMarketSize: 'Oklahoma legal services: $2.1B annually',
+            processServingSegment: 'Estimated $15M annually',
+            ourMarketShare: 'Targeting 25% market share by 2025',
+            keyOpportunities: [
+              'Same-day service premium pricing',
+              'Statewide expansion beyond Tulsa',
+              'Technology differentiation',
+              'Emergency/after-hours services',
+              'Court filing partnerships'
+            ]
+          },
+          competitiveStrategies: {
+            pricingStrategy: 'Premium pricing for premium service',
+            serviceStrategy: 'Speed and availability leadership',
+            marketingStrategy: 'Digital-first with local presence',
+            technologyStrategy: 'Automation and tracking leadership',
+            customerStrategy: 'Relationship-based with law firms'
+          },
+          dominationTactics: [
+            'Capture all "emergency" and "same day" search traffic',
+            'Dominate Google Business Profile for all target cities',
+            'Build strategic partnerships with major law firms',
+            'Develop subscription-based service packages',
+            'Create content that ranks for competitor brand terms'
+          ]
+        };
+        
+        fs.writeFileSync('market-domination-strategy.json', JSON.stringify(dominationStrategy, null, 2));
+        
+        // Generate competitor comparison content
+        const competitorComparison = \`
+        export default function CompetitorComparison() {
+          return (
+            <div className="bg-white py-16">
+              <div className="container mx-auto px-4">
+                <h2 className="text-4xl font-bold text-center mb-12">Why Choose Just Legal Solutions?</h2>
+                
+                <div className="overflow-x-auto">
+                  <table className="w-full max-w-6xl mx-auto bg-white shadow-xl rounded-lg">
+                    <thead>
+                      <tr className="bg-blue-600 text-white">
+                        <th className="p-4 text-left">Service Feature</th>
+                        <th className="p-4 text-center bg-green-600">Just Legal Solutions</th>
+                        <th className="p-4 text-center">Typical Competitor</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b">
+                        <td className="p-4 font-semibold">Response Time</td>
+                        <td className="p-4 text-center bg-green-50">
+                          <span className="text-green-800 font-bold">15 minutes average</span>
+                        </td>
+                        <td className="p-4 text-center text-red-600">2-4 hours</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-4 font-semibold">Same-Day Service</td>
+                        <td className="p-4 text-center bg-green-50">
+                          <span className="text-green-800 font-bold">✅ Guaranteed</span>
+                        </td>
+                        <td className="p-4 text-center text-red-600">❌ Limited</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-4 font-semibold">24/7 Emergency Service</td>
+                        <td className="p-4 text-center bg-green-50">
+                          <span className="text-green-800 font-bold">✅ True 24/7</span>
+                        </td>
+                        <td className="p-4 text-center text-red-600">❌ Business hours only</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-4 font-semibold">Success Rate</td>
+                        <td className="p-4 text-center bg-green-50">
+                          <span className="text-green-800 font-bold">99.8%</span>
+                        </td>
+                        <td className="p-4 text-center text-red-600">85-90%</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-4 font-semibold">Digital Proof</td>
+                        <td className="p-4 text-center bg-green-50">
+                          <span className="text-green-800 font-bold">✅ GPS + Photos</span>
+                        </td>
+                        <td className="p-4 text-center text-red-600">❌ Paper only</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="p-4 font-semibold">Statewide Coverage</td>
+                        <td className="p-4 text-center bg-green-50">
+                          <span className="text-green-800 font-bold">✅ All 77 counties</span>
+                        </td>
+                        <td className="p-4 text-center text-red-600">❌ Limited regions</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div className="text-center mt-12">
+                  <p className="text-xl text-gray-600 mb-6">Ready to experience the difference?</p>
+                  <a href="tel:5393676832" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+                    Call (539) 367-6832 - See Why We're #1 in Oklahoma
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        }
+        \`;
+        
+        fs.mkdirSync('components/competitive', { recursive: true });
+        fs.writeFileSync('components/competitive/CompetitorComparison.tsx', competitorComparison);
+        
+        console.log('🎯 Competitive Intelligence Analysis Complete!');
+        console.log('📊 Generated:');
+        console.log('- 5 competitive advantage pages');
+        console.log('- Market domination strategy');
+        console.log('- Competitor comparison component');
+        console.log('- Strategic positioning content');
+        
+        EOF
+        
+        node competitive-intelligence.js
+        
+    - name: Generate Location-Based Competitor Response
+      run: |
+        echo "📍 Creating location-specific competitive responses..."
+        
+        # Target Tulsa County first (your local area), then major Oklahoma markets
+        # COMPREHENSIVE OKLAHOMA CITIES FOR TOTAL MARKET DOMINATION 🏆
+        declare -a LOCAL_CITIES=(
+          "Glenpool" "Tulsa" "Broken Arrow" "Bixby" "Jenks" "Sand Springs" "Owasso" "Sapulpa"
+          "Claremore" "Skiatook" "Collinsville" "Catoosa" "Coweta" "Wagoner" "Mounds" "Kiefer"
+          "Leonard" "Oakhurst" "Berryhill" "Turley" "Sperry" "Vera" "Dawson" "Kellyville"
+        )
+        declare -a STATEWIDE_CITIES=(
+          "Oklahoma City" "Norman" "Edmond" "Lawton" "Stillwater" "Enid" "Moore" "Midwest City"
+          "Del City" "Mustang" "Yukon" "Bethany" "Warr Acres" "The Village" "Nichols Hills"
+          "Piedmont" "Spencer" "Jones" "Ponca City" "Bartlesville" "Muskogee" "Shawnee"
+          "McAlester" "Ardmore" "Duncan" "Ada" "Tahlequah" "Durant" "El Reno" "Miami"
+          "Altus" "Chickasha" "Guthrie" "Woodward" "Elk City" "Weatherford" "Clinton"
+          "Pryor Creek" "Sallisaw" "Poteau" "Henryetta" "Okmulgee" "Seminole" "Tecumseh"
+          "Holdenville" "Pauls Valley" "Purcell" "Noble" "Blanchard" "Newcastle" "Tuttle"
+          "Cushing" "Perkins" "Cache" "Fletcher" "Medicine Park" "Dewey" "Copan" "Inola"
+          "Chelsea" "Drumright" "Bristow" "Mannford" "Porter" "Okay" "Pawhusha" "Hominy"
+          "Fairfax" "Barnsdall" "Fort Gibson" "Oktaha" "Haskell" "Blackwell" "Newkirk"
+          "Tonkawa" "Hartshorne" "Krebs" "Healdton" "Lone Grove" "Marlow" "Comanche"
+          "Stratford" "Keys" "Park Hill" "Calera" "Caddo" "Commerce" "Fairland" "Blair"
+          "Duke" "Minco" "Pocasset" "Crescent" "Mulhall" "Marshall" "Coyle"
+        )
+        declare -a COMPETITOR_KEYWORDS=("process server" "legal documents" "court papers" "subpoena service")
+        
+        
+        # Focus on local Tulsa County cities first (80% of business)
+        for city in "${LOCAL_CITIES[@]}"; do
+          echo "Creating LOCAL competitive content for ${city}..."
+          
+          cat > "app/(main)/best-process-server-${city,,}/page.tsx" << EOF
+        import type { Metadata } from 'next';
+        
+        export const metadata: Metadata = {
+          title: 'Best Process Server in ${city}, Oklahoma | Just Legal Solutions - Glenpool Based',
+          description: 'Local ${city} process server based in nearby Glenpool. Same-day service, 15-minute response time, serving Tulsa County. Call (539) 367-6832.',
+          keywords: '${city} process server, process serving ${city}, legal documents ${city}, court papers ${city}, glenpool process server',
+          openGraph: {
+            title: 'Local Process Server: ${city}, Oklahoma',
+            description: 'Glenpool-based process server serving ${city} daily. Fastest response in Tulsa County.',
+            url: 'https://justlegalsolutions.org/best-process-server-${city,,}',
+            type: 'website'
+          }
+        };
+        
+        export default function BestProcessServer${city}() {
+          return (
+            <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+              <div className="container mx-auto px-4 py-16">
+                <div className="max-w-4xl mx-auto text-center">
+                  <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-bold mb-6">
+                    📍 Local ${city} Process Server - Based in Glenpool
+                  </div>
+                  
+                  <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                    Process Server in ${city}, Oklahoma
+                  </h1>
+                  
+                  <p className="text-xl text-gray-600 mb-8">
+                    Local Glenpool-based process server serving ${city} daily. 
+                    We know the area, the courts, and get your documents served fast!
+                  </p>
+                  
+                  <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8">Why ${city} Residents Choose Us</h2>
+                    
+                    <div className="grid md:grid-cols-3 gap-6 mb-8">
+                      <div className="text-center">
+                        <div className="text-4xl font-bold text-blue-600 mb-2">5min</div>
+                        <div className="text-sm text-gray-600">Drive Time to ${city}</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-4xl font-bold text-green-600 mb-2">Same Day</div>
+                        <div className="text-sm text-gray-600">${city} Service Available</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-4xl font-bold text-purple-600 mb-2">Local</div>
+                        <div className="text-sm text-gray-600">Tulsa County Expert</div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-blue-50 p-6 rounded-xl mb-6">
+                      <h3 className="text-xl font-bold text-blue-900 mb-3">Local Advantage in ${city}</h3>
+                      <p className="text-blue-800">Based right here in Glenpool, we serve ${city} multiple times daily. We know every street, every business, and every courthouse in Tulsa County.</p>
+                    </div>
+                    
+                    <div className="bg-red-500 text-white rounded-xl p-6">
+                      <h3 className="text-2xl font-bold mb-4">Need Process Serving in ${city} Today?</h3>
+                      <p className="text-lg mb-4">Local Glenpool server can be in ${city} in minutes!</p>
+                      <a href="tel:5393676832" className="inline-block bg-white text-red-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Call (539) 367-6832 - Local ${city} Service
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "LocalBusiness",
+                  "name": "Just Legal Solutions - ${city} Process Server",
+                  "url": "https://justlegalsolutions.org/best-process-server-${city,,}",
+                  "telephone": "(539) 367-6832",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Glenpool",
+                    "addressRegion": "Oklahoma",
+                    "addressCountry": "US"
+                  },
+                  "areaServed": ["${city}", "Tulsa County", "Oklahoma"],
+                  "description": "Local process server based in Glenpool serving ${city}, Oklahoma. Same-day service available.",
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "35.9553",
+                    "longitude": "-96.0086"
+                  }
+                })
+              }} />
+            </div>
+          );
+        }
+        EOF
+          
+          mkdir -p "app/(main)/best-process-server-${city,,}"
+        done
+        
+        # Then target major statewide markets (20% expansion opportunity)
+        for city in "${STATEWIDE_CITIES[@]}"; do
+          echo "Creating STATEWIDE competitive content for ${city}..."
+          
+          cat > "app/(main)/oklahoma-process-server-${city,,}/page.tsx" << EOF
+        import type { Metadata } from 'next';
+        
+        export const metadata: Metadata = {
+          title: 'Oklahoma Process Server - ${city} | Statewide Service | Just Legal Solutions',
+          description: 'Professional process server serving ${city}, Oklahoma. Statewide coverage, licensed professionals, same-day service available. Call (539) 367-6832.',
+          keywords: '${city} process server, oklahoma process serving, statewide process server, legal documents ${city}',
+          openGraph: {
+            title: 'Oklahoma Process Server - ${city}',
+            description: 'Professional statewide process serving in ${city}, Oklahoma. Licensed and ready to serve.',
+            url: 'https://justlegalsolutions.org/oklahoma-process-server-${city,,}',
+            type: 'website'
+          }
+        };
+        
+        export default function OklahomaProcessServer${city}() {
+          return (
+            <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">
+              <div className="container mx-auto px-4 py-16">
+                <div className="max-w-4xl mx-auto text-center">
+                  <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-6">
+                    🏛️ Oklahoma Statewide Process Server - ${city} Coverage
+                  </div>
+                  
+                  <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                    Oklahoma Process Server - ${city}
+                  </h1>
+                  
+                  <p className="text-xl text-gray-600 mb-8">
+                    Professional statewide process serving in ${city}, Oklahoma. 
+                    Licensed, bonded, and ready to serve your legal documents.
+                  </p>
+                  
+                  <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8">Statewide Oklahoma Coverage</h2>
+                    
+                    <div className="grid md:grid-cols-3 gap-6 mb-8">
+                      <div className="text-center">
+                        <div className="text-4xl font-bold text-green-600 mb-2">77</div>
+                        <div className="text-sm text-gray-600">Oklahoma Counties</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-4xl font-bold text-blue-600 mb-2">Same Day</div>
+                        <div className="text-sm text-gray-600">${city} Service</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-4xl font-bold text-purple-600 mb-2">Licensed</div>
+                        <div className="text-sm text-gray-600">Statewide Authority</div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-green-50 p-6 rounded-xl mb-6">
+                      <h3 className="text-xl font-bold text-green-900 mb-3">Statewide Network</h3>
+                      <p className="text-green-800">Our Oklahoma-wide network ensures professional service in ${city} and throughout the state. One call covers all your process serving needs.</p>
+                    </div>
+                    
+                    <div className="bg-blue-500 text-white rounded-xl p-6">
+                      <h3 className="text-2xl font-bold mb-4">Statewide Oklahoma Process Serving</h3>
+                      <p className="text-lg mb-4">Professional service in ${city} and beyond!</p>
+                      <a href="tel:5393676832" className="inline-block bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Call (539) 367-6832 - Statewide Service
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+        EOF
+          
+          mkdir -p "app/(main)/oklahoma-process-server-${city,,}"
+        done
+        
+        echo "✅ Location-based competitive pages generated"
+        
+    - name: Commit competitive intelligence updates
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Market Intelligence Bot"
+        git add .
+        git diff --staged --quiet || git commit -m "🎯 Competitive intelligence update - $(date '+%Y-%m-%d %H:%M')"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

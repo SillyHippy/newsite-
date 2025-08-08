@@ -1,0 +1,49 @@
+name: Competitor Analysis Bot
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'  # Every 12 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  competitor-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Competitor Analysis
+        run: |
+          echo "🔍 Starting Competitor Analysis..."
+          node scripts/competitor-analysis-bot.js
+
+      - name: Git Configuration
+        run: |
+          git config --global user.name 'Competitor Analysis Bot'
+          git config --global user.email 'seo@justlegalsolutions.org'
+
+      - name: Commit Analysis Results
+        run: |
+          git add .
+          git pull origin main
+          git commit -m "🔍 Competitor Analysis - $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push origin main
+
+      - name: Analysis Complete
+        run: |
+          echo "✅ Competitor Analysis Complete"
+          echo "📊 Competitor scores analyzed"
+          echo "🎯 Opportunities identified"
+          echo "⚠️ Threats assessed"

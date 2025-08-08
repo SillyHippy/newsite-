@@ -1,0 +1,101 @@
+[
+  {
+    "name": "TulsaProcessServers.com",
+    "url": "https://tulsaprocessservers.com",
+    "timestamp": "2025-08-03T12:21:40.735Z",
+    "factors": {
+      "keywords": {
+        "score": 0,
+        "density": {
+          "process server tulsa": "0.00",
+          "legal document delivery": "0.00",
+          "tulsa county process serving": "0.00"
+        }
+      },
+      "contentLength": {
+        "score": 10,
+        "wordCount": 1
+      },
+      "schema": {
+        "score": 0,
+        "hasSchema": false
+      }
+    },
+    "score": 1,
+    "recommendations": [
+      "Increase keyword density and placement",
+      "Expand content length to 300-2000 words",
+      "Implement structured data and schema markup"
+    ]
+  },
+  {
+    "name": "OklahomaProcessServing.com",
+    "url": "https://oklahomaprocessserving.com",
+    "error": "getaddrinfo ENOTFOUND oklahomaprocessserving.com",
+    "score": 0
+  },
+  {
+    "name": "LegalProcessServers.net",
+    "url": "https://legalprocessservers.net",
+    "error": "connect ETIMEDOUT 160.153.95.220:443",
+    "score": 0
+  },
+  {
+    "name": "ProcessServerDirectory.com",
+    "url": "https://processserverdirectory.com",
+    "timestamp": "2025-08-03T12:23:59.943Z",
+    "factors": {
+      "keywords": {
+        "score": 0,
+        "density": {
+          "find process server": "0.00",
+          "hire process server": "0.00",
+          "local process serving": "0.00"
+        }
+      },
+      "contentLength": {
+        "score": 10,
+        "wordCount": 3
+      },
+      "schema": {
+        "score": 0,
+        "hasSchema": false
+      }
+    },
+    "score": 1,
+    "recommendations": [
+      "Increase keyword density and placement",
+      "Expand content length to 300-2000 words",
+      "Implement structured data and schema markup"
+    ]
+  },
+  {
+    "name": "ServeNow.com",
+    "url": "https://servenow.com",
+    "timestamp": "2025-08-03T12:24:02.033Z",
+    "factors": {
+      "keywords": {
+        "score": 0,
+        "density": {
+          "same day process serving": "0.00",
+          "emergency process server": "0.00",
+          "rush legal service": "0.00"
+        }
+      },
+      "contentLength": {
+        "score": 10,
+        "wordCount": 1
+      },
+      "schema": {
+        "score": 0,
+        "hasSchema": false
+      }
+    },
+    "score": 1,
+    "recommendations": [
+      "Increase keyword density and placement",
+      "Expand content length to 300-2000 words",
+      "Implement structured data and schema markup"
+    ]
+  }
+]

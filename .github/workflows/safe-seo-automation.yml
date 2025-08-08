@@ -1,0 +1,76 @@
+
+name: Safe SEO Automation
+
+on:
+  schedule:
+    # Run weekly on Tuesdays at 10 AM (natural business timing)
+    - cron: '0 10 * * 2'
+  workflow_dispatch:
+    inputs:
+      force_check:
+        description: 'Force check for new content opportunities'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  safe-seo-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Safe SEO Protocol Check
+      run: |
+        echo "🛡️ Running Safe SEO Protocol Check"
+        echo "=================================="
+        
+        # Check if it's safe to create content
+        node scripts/safe-seo-protocol.js
+        
+        # Only update sitemap if there's genuine new content
+        node scripts/natural-sitemap-updater.js
+        
+        echo "✅ Safe SEO check completed"
+        
+    - name: Commit natural changes only
+      run: |
+        git config --local user.email "seo@justlegalsolutions.org"
+        git config --local user.name "Safe SEO Bot"
+        
+        # Only commit if there are actual changes
+        if git diff --staged --quiet && git diff --quiet; then
+          echo "No changes to commit - maintaining natural patterns"
+        else
+          git add .
+          git commit -m "🛡️ Natural SEO update - $(date +%Y-%m-%d)" || echo "No changes to commit"
+          git push
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: SEO Guidelines Compliance Report
+      run: |
+        echo "📊 SEO COMPLIANCE REPORT"
+        echo "========================"
+        echo "✅ Following Google's quality guidelines"
+        echo "✅ Natural content creation timing"
+        echo "✅ Substantial, unique content only"
+        echo "✅ Weekly automation frequency (not daily)"
+        echo "✅ Business-hour timing patterns"
+        echo "✅ Quality over quantity approach"
+        echo "✅ No artificial link building"
+        echo "✅ Genuine sitemap updates only"

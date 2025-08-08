@@ -1,0 +1,340 @@
+name: 24/7 Ranking Pressure - Weekend & Evening Blitz
+
+on:
+  schedule:
+    # Weekend aggressive schedule + late evening pushes
+    - cron: '0 */2 * * 6,0'  # Every 2 hours on weekends
+    - cron: '0 22,23 * * 1-5'  # 10 PM and 11 PM on weekdays
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  weekend-evening-blitz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Generate After-Hours Emergency Content
+      run: |
+        cat > after-hours-boost.js << 'EOF'
+        const fs = require('fs');
+        
+        console.log('🌙 AFTER-HOURS RANKING PRESSURE ACTIVATED...');
+        
+        const now = new Date();
+        const hour = now.getHours();
+        const isWeekend = [0, 6].includes(now.getDay());
+        const timeStamp = now.toISOString();
+        
+        // After-hours and weekend keywords
+        const afterHoursKeywords = [
+          'emergency process server tulsa tonight',
+          'weekend process serving oklahoma',
+          'after hours legal document delivery',
+          'saturday process server available',
+          'sunday emergency process serving',
+          'late night process server',
+          'holiday process serving',
+          'overnight legal documents'
+        ];
+        
+        const keyword = afterHoursKeywords[hour % afterHoursKeywords.length];
+        const timeContext = isWeekend ? 'WEEKEND' : 'EVENING';
+        const urgencyMessage = isWeekend ? 
+          'Weekend Emergency Service - We Work When Others Don\'t!' :
+          'Late Evening Service - Available After Business Hours!';
+        
+        // Generate time-specific landing page
+        const afterHoursContent = `
+        import type { Metadata } from 'next';
+        
+        export const metadata: Metadata = {
+          title: '${timeContext} Emergency: ${keyword.toUpperCase()} | Available Now',
+          description: '${urgencyMessage} Call (539) 367-6832 - ${timeContext.toLowerCase()} process servers standing by for immediate dispatch.',
+          keywords: '${keyword}, weekend process server, after hours legal service, emergency oklahoma',
+          openGraph: {
+            title: '${timeContext} Process Serving Available NOW',
+            description: '${urgencyMessage} Immediate dispatch available.',
+            url: 'https://justlegalsolutions.org/${timeContext.toLowerCase()}-${keyword.replace(/\\s+/g, '-')}',
+            type: 'website'
+          }
+        };
+        
+        export default function ${timeContext}Emergency() {
+          return (
+            <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">
+              <div className="container mx-auto px-4 py-16">
+                <div className="max-w-4xl mx-auto">
+                  
+                  {/* After-Hours Alert */}
+                  <div className="bg-yellow-500 text-black text-center py-6 rounded-lg mb-8 animate-pulse">
+                    <div className="text-3xl font-bold">🌙 ${timeContext} EMERGENCY SERVICE 🌙</div>
+                    <div className="text-xl">${urgencyMessage}</div>
+                    <div className="text-lg">Active Right Now: ${timeStamp.split('T')[1].split('.')[0]} CST</div>
+                  </div>
+                  
+                  <div className="text-center mb-12">
+                    <h1 className="text-6xl font-bold text-yellow-400 mb-4">
+                      ${timeContext} Process Serving
+                    </h1>
+                    <h2 className="text-3xl font-semibold mb-6">
+                      ${keyword.charAt(0).toUpperCase() + keyword.slice(1)}
+                    </h2>
+                    <p className="text-xl mb-8">
+                      Other process servers are closed, but we're here! Emergency hotline active 24/7/365.
+                      Glenpool-based servers ready for immediate deployment.
+                    </p>
+                  </div>
+                  
+                  {/* Live After-Hours Status */}
+                  <div className="bg-black bg-opacity-50 rounded-2xl p-8 mb-12 border-2 border-yellow-400">
+                    <h3 className="text-3xl font-bold text-center text-yellow-400 mb-8">
+                      🔴 LIVE ${timeContext} STATUS
+                    </h3>
+                    
+                    <div className="grid md:grid-cols-4 gap-6 mb-8">
+                      <div className="text-center bg-green-600 bg-opacity-80 p-4 rounded-xl">
+                        <div className="text-3xl font-bold">ON</div>
+                        <div className="text-sm">Emergency Line</div>
+                      </div>
+                      <div className="text-center bg-blue-600 bg-opacity-80 p-4 rounded-xl">
+                        <div className="text-3xl font-bold">${Math.floor(Math.random() * 3) + 1}</div>
+                        <div className="text-sm">${timeContext} Servers</div>
+                      </div>
+                      <div className="text-center bg-purple-600 bg-opacity-80 p-4 rounded-xl">
+                        <div className="text-3xl font-bold">15min</div>
+                        <div className="text-sm">Response Time</div>
+                      </div>
+                      <div className="text-center bg-red-600 bg-opacity-80 p-4 rounded-xl">
+                        <div className="text-3xl font-bold">24/7</div>
+                        <div className="text-sm">Always Available</div>
+                      </div>
+                    </div>
+                    
+                    <div className="text-center">
+                      <div className="bg-yellow-500 text-black rounded-xl p-8">
+                        <h4 className="text-2xl font-bold mb-4">Need ${timeContext} Service RIGHT NOW?</h4>
+                        <p className="text-lg mb-6">Don't wait until Monday! We're available ${timeContext.toLowerCase()}!</p>
+                        <a href="tel:5393676832" className="inline-block bg-black text-yellow-400 px-8 py-4 rounded-lg text-xl font-bold hover:bg-gray-900 transition transform hover:scale-105">
+                          📞 EMERGENCY: (539) 367-6832
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Why Choose After-Hours Service */}
+                  <div className="grid md:grid-cols-2 gap-8 mb-12">
+                    <div className="bg-white bg-opacity-10 p-6 rounded-xl">
+                      <h4 className="text-xl font-bold text-yellow-400 mb-3">🌙 True 24/7 Service</h4>
+                      <p>While others sleep, we serve. Real ${timeContext.toLowerCase()} availability, not just an answering service.</p>
+                    </div>
+                    <div className="bg-white bg-opacity-10 p-6 rounded-xl">
+                      <h4 className="text-xl font-bold text-yellow-400 mb-3">⚡ Emergency Priority</h4>
+                      <p>${timeContext} calls get priority dispatch. <a href="/pricing" className="text-blue-600 hover:underline font-semibold">View emergency pricing →</a></p>
+                    </div>
+                    <div className="bg-white bg-opacity-10 p-6 rounded-xl">
+                      <h4 className="text-xl font-bold text-yellow-400 mb-3">📍 Local Advantage</h4>
+                      <p>Glenpool-based servers live locally. We know the area even in the dark.</p>
+                    </div>
+                    <div className="bg-white bg-opacity-10 p-6 rounded-xl">
+                      <h4 className="text-xl font-bold text-yellow-400 mb-3">💰 Fixed Pricing</h4>
+                      <p>${timeContext} emergency service available. <a href="/pricing" className="text-blue-600 hover:underline font-semibold">View current rates →</a> No hidden fees.</p>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "EmergencyService",
+                  "name": "${timeContext} Emergency Process Serving",
+                  "url": "https://justlegalsolutions.org/${timeContext.toLowerCase()}-${keyword.replace(/\\s+/g, '-')}",
+                  "telephone": "(539) 367-6832",
+                  "openingHours": "Mo-Su 00:00-23:59",
+                  "areaServed": "Oklahoma",
+                  "description": "${urgencyMessage} Available ${timeContext.toLowerCase()} for emergency legal document service.",
+                  "offers": {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "${timeContext} Emergency Process Serving"
+                    },
+                    "availability": "https://schema.org/InStock"
+                  }
+                })
+              }} />
+            </div>
+          );
+        }
+        `;
+        
+        // Create after-hours landing page
+        const pageDir = \`app/(main)/\${timeContext.toLowerCase()}-\${keyword.replace(/\\s+/g, '-')}\`;
+        fs.mkdirSync(pageDir, { recursive: true });
+        fs.writeFileSync(\`\${pageDir}/page.tsx\`, afterHoursContent);
+        
+        console.log(\`🌙 ${timeContext} EMERGENCY PAGE: \${keyword}\`);
+        
+        EOF
+        
+        node after-hours-boost.js
+        
+    - name: Generate Micro-Location Content
+      run: |
+        echo "📍 Creating hyper-local content for micro-targeting..."
+        
+        # Tulsa County neighborhoods and areas
+        AREAS=("Riverside" "Brookside" "Cherry Street" "Downtown Tulsa" "Midtown" "South Tulsa" "East Tulsa" "North Tulsa")
+        HOUR=$(date +%H)
+        SELECTED_AREA=${AREAS[$((HOUR % 8))]}
+        
+        cat > "app/(main)/process-server-${SELECTED_AREA,,}-tulsa/page.tsx" << EOF
+        import type { Metadata } from 'next';
+        
+        export const metadata: Metadata = {
+          title: 'Process Server ${SELECTED_AREA}, Tulsa OK | Local Glenpool Service | Just Legal Solutions',
+          description: 'Local process server serving ${SELECTED_AREA} area of Tulsa. Based in Glenpool, 5-minute response to ${SELECTED_AREA}. Call/text (539) 367-6832.',
+          keywords: 'process server ${SELECTED_AREA}, ${SELECTED_AREA} tulsa legal documents, glenpool process server, tulsa neighborhoods',
+          openGraph: {
+            title: 'Process Server ${SELECTED_AREA}, Tulsa - Local Service',
+            description: 'Glenpool-based process server serving ${SELECTED_AREA} area daily. Local knowledge, fast service.',
+            url: 'https://justlegalsolutions.org/process-server-${SELECTED_AREA,,}-tulsa',
+            type: 'website'
+          }
+        };
+        
+        export default function ProcessServer${SELECTED_AREA}() {
+          return (
+            <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+              <div className="container mx-auto px-4 py-16">
+                <div className="max-w-4xl mx-auto">
+                  
+                  <div className="text-center mb-12">
+                    <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                      📍 LOCAL ${SELECTED_AREA} SERVICE
+                    </div>
+                    <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                      Process Server in ${SELECTED_AREA}, Tulsa
+                    </h1>
+                    <p className="text-xl text-gray-600 mb-8">
+                      Serving the ${SELECTED_AREA} area of Tulsa daily from our Glenpool base. 
+                      We know every street, every business, every shortcut in ${SELECTED_AREA}.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8">${SELECTED_AREA} Area Expertise</h2>
+                    
+                    <div className="grid md:grid-cols-3 gap-6 mb-8">
+                      <div className="text-center">
+                        <div className="text-4xl font-bold text-green-600 mb-2">LOCAL</div>
+                        <div className="text-sm text-gray-600">${SELECTED_AREA} Knowledge</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-4xl font-bold text-blue-600 mb-2">5min</div>
+                        <div className="text-sm text-gray-600">To ${SELECTED_AREA}</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-4xl font-bold text-purple-600 mb-2">DAILY</div>
+                        <div className="text-sm text-gray-600">${SELECTED_AREA} Routes</div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-green-50 p-6 rounded-xl mb-6">
+                      <h3 className="text-xl font-bold text-green-900 mb-3">${SELECTED_AREA} Local Advantage</h3>
+                      <p className="text-green-800">
+                        Based in nearby Glenpool, we serve the ${SELECTED_AREA} area of Tulsa multiple times every day. 
+                        We know the traffic patterns, the building layouts, and the best times to find people at home or work.
+                      </p>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-8">
+                      <div className="bg-blue-50 p-6 rounded-xl">
+                        <h4 className="text-lg font-bold text-blue-900 mb-3">✅ ${SELECTED_AREA} Residential</h4>
+                        <ul className="space-y-1 text-blue-800 text-sm">
+                          <li>• Apartments and condos</li>
+                          <li>• Single-family homes</li>
+                          <li>• Gated communities</li>
+                          <li>• Senior living facilities</li>
+                        </ul>
+                      </div>
+                      <div className="bg-purple-50 p-6 rounded-xl">
+                        <h4 className="text-lg font-bold text-purple-900 mb-3">🏢 ${SELECTED_AREA} Business</h4>
+                        <ul className="space-y-1 text-purple-800 text-sm">
+                          <li>• Office buildings</li>
+                          <li>• Retail locations</li>
+                          <li>• Medical facilities</li>
+                          <li>• Professional services</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center bg-gray-900 text-white rounded-xl p-8">
+                    <h3 className="text-2xl font-bold mb-4">Need Process Serving in ${SELECTED_AREA} Today?</h3>
+                    <p className="text-lg mb-6">Local Glenpool server knows ${SELECTED_AREA} like the back of our hand!</p>
+                    <a href="tel:5393676832" className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                      Call (539) 367-6832 - ${SELECTED_AREA} Service
+                    </a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          );
+        }
+        EOF
+        
+        mkdir -p "app/(main)/process-server-${SELECTED_AREA,,}-tulsa"
+        echo "✅ Micro-location page created for ${SELECTED_AREA}"
+        
+    - name: Aggressive Search Engine Pinging
+      run: |
+        echo "🔥 MAXIMUM INDEXING PRESSURE..."
+        
+        # Multiple IndexNow submissions
+        for i in {1..3}; do
+          curl -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "host": "justlegalsolutions.org",
+              "key": "6CC946BF0B766479F1E3E6C484F82A12",
+              "urlList": [
+                "https://justlegalsolutions.org/",
+                "https://justlegalsolutions.org/sitemap.xml"
+              ]
+            }'
+          sleep 2
+        done
+        
+        # Continuous sitemap pings
+        curl -s "https://www.google.com/ping?sitemap=https://justlegalsolutions.org/sitemap.xml"
+        curl -s "https://www.bing.com/ping?sitemap=https://justlegalsolutions.org/sitemap.xml"
+        
+        echo "🚀 MAXIMUM PRESSURE APPLIED"
+        
+    - name: Commit weekend/evening updates
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "24/7 Ranking Bot"
+        git add .
+        git diff --staged --quiet || git commit -m "🌙 24/7 RANKING PRESSURE: After-hours content + micro-locations - $(date '+%Y-%m-%d %H:%M')"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

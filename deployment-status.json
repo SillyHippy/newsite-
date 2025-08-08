@@ -1,0 +1,42 @@
+
+{
+  "deployed": [
+    {
+      "name": "Tulsa",
+      "county": "Tulsa County",
+      "slug": "tulsa-process-server",
+      "deployedAt": "2024-01-01T00:00:00.000Z",
+      "priority": 0
+    },
+    {
+      "name": "Broken Arrow", 
+      "county": "Tulsa County",
+      "slug": "broken-arrow-process-server",
+      "deployedAt": "2024-01-15T00:00:00.000Z",
+      "priority": 0
+    },
+    {
+      "name": "Bixby",
+      "county": "Tulsa County", 
+      "slug": "bixby-process-server",
+      "deployedAt": "2024-02-01T00:00:00.000Z",
+      "priority": 0
+    },
+    {
+      "name": "Sapulpa",
+      "county": "Creek County",
+      "slug": "sapulpa-process-server", 
+      "deployedAt": "2024-02-15T00:00:00.000Z",
+      "priority": 0
+    },
+    {
+      "name": "Glenpool",
+      "county": "Tulsa County",
+      "slug": "glenpool-process-server",
+      "deployedAt": "2024-03-01T00:00:00.000Z", 
+      "priority": 0
+    }
+  ],
+  "nextIndex": 0,
+  "lastDeployment": "2024-03-01T00:00:00.000Z"
+}

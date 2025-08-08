@@ -1,0 +1,56 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Just Legal Solutions",
+  "image": "https://justlegalsolutions.org/logo.png",
+  "@id": "https://justlegalsolutions.org/",
+  "url": "https://justlegalsolutions.org/",
+  "telephone": "(539) 367-6832",
+  "priceRange": "$30-$150",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "564 E 138th St",
+    "addressLocality": "Glenpool",
+    "addressRegion": "OK",
+    "postalCode": "74033",
+    "addressCountry": "US"
+  },
+  "openingHours": "24/7",
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Tulsa County"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Creek County"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Wagoner County"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Rogers County"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Osage County"
+    }
+  ],
+  "serviceArea": "Statewide, focused on Tulsa County, Creek County (Sapulpa, Kiefer, Mounds), Wagoner County (Broken Arrow portion), Rogers County (Claremore, Catoosa), Osage County (Sand Springs, Sperry, West Tulsa)",
+  "description": "Process serving and legal solutions throughout Oklahoma. Enhanced rates for non-clustered assignments. Starting at just $30 - Oklahoma's cheapest, fastest, and best.",
+  "sameAs": [
+    "https://www.facebook.com/justlegalsolutions",
+    "https://www.linkedin.com/company/justlegalsolutions",
+    "https://www.yelp.com/biz/just-legal-solutions-glenpool",
+    "https://www.manta.com/c/m1x7pgf/just-legal-solutions",
+    "https://www.showmelocal.com/38832951-just-legal-solutions-glenpool",
+    "https://www.crunchbase.com/organization/just-legal-solutions",
+    "https://www.alignable.com/glenpool-ok/just-legal-solutions",
+    "https://www.elocal.com/profile/just-legal-solutions-21951593",
+    "https://www.yellowpages.com/glenpool-ok/mip/just-legal-solutions-606085805",
+    "https://www.dnb.com/business-directory/company-profiles.just_legal_solutions_llc.html",
+    "https://clutch.co/profile/just-legal-solutions"
+  ]
+}

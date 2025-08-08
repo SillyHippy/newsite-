@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Affidavit of Process Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0; }
+    .container { background: #fff; max-width: 900px; margin: 0.5em auto; padding: 1em; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+    h1 { text-align: center; margin-bottom: 1em; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1em; table-layout: auto; }
+    th, td { padding: 0.5em; border: 1px solid #bbb; min-width: 90px; word-break: break-word; }
+    th { background: #eaeaea; text-align: left; }
+    .container { overflow-x: auto; }
+    .section { background: #eaeaea; font-weight: bold; text-align: left; padding: 0.5em; }
+    textarea { width: 100%; min-height: 80px; }
+    .center { text-align: center; }
+    .checkboxes label { display: inline-block; margin-right: 1em; }
+    .actions { text-align: center; margin-top: 2em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Affidavit of Process Server</h1>
+    <form id="affidavit-form">
+      <label>
+        Name of Court
+        <input aria-label="Name of Court" name="Name of Court" type="text">
+      </label><br>
+      <label>
+        Plaintiff/Petitioner
+        <input aria-label="Plaintiff/Petitioner" name="Plaintiff/Petitioner" type="text">
+      </label><br>
+      <label>
+        Defendant/Respondent
+        <input aria-label="Defendant/Respondent" name="Defendant/Respondent" type="text">
+      </label><br>
+      <label>
+        Case Number
+        <input aria-label="Case Number" name="Case Number" type="text">
+      </label><br>
+      <label>
+        Recipient Name
+        <input aria-label="Recipient Name" name="Recipient Name" type="text">
+      </label><br>
+      <label>
+        Address
+        <input aria-label="Address" name="Address" type="text">
+      </label><br>
+      <label>
+        Documents
+        <input aria-label="Documents" name="Documents" type="text">
+      </label><br>
+      <fieldset>
+        <legend>Manner of Service</legend>
+        <label><input type="checkbox" aria-label="Personal Service" name="Personal Service"> Personal Service</label>
+        <label><input type="checkbox" aria-label="Substituted at Residence" name="Substituted at Residence"> Substituted at Residence</label>
+        <label><input type="checkbox" aria-label="Substituted at Business" name="Substituted at Business"> Substituted at Business</label>
+        <label><input type="checkbox" aria-label="Posting" name="Posting"> Posting</label>
+        <label><input type="checkbox" aria-label="Non-Service" name="Non-Service"> Non-Service</label>
+        <label><input type="checkbox" aria-label="Unknown at address" name="Unknown at address"> Unknown at address</label>
+        <label><input type="checkbox" aria-label="Moved left no forwarding" name="Moved left no forwarding"> Moved left no forwarding</label>
+        <label><input type="checkbox" aria-label="Service canceled by litigant" name="Service canceled by litigant"> Service canceled by litigant</label>
+        <label><input type="checkbox" aria-label="Unable to serve in a timely fashion" name="Unable to serve in a timely fashion"> Unable to serve in a timely fashion</label>
+        <label><input type="checkbox" aria-label="Address does not exist" name="Address does not exist"> Address does not exist</label>
+        <label><input type="checkbox" aria-label="other" name="other"> Other</label>
+        <input aria-label="Other textbox" name="Other textbox" type="text" placeholder="Other detail">
+      </fieldset>
+      <label>
+        Service attempt 1 Date
+        <input aria-label="Service attempt 1 Date" name="Service attempt 1 Date" type="text" placeholder="MM/DD/YYYY">
+      </label>
+      <label>
+        Service attempt 1 time
+        <input aria-label="Service attempt 1 time" name="Service attempt 1 time" type="text" placeholder="HH:MM AM/PM">
+      </label><br>
+      <label>
+        Service attempt 2 Date
+        <input aria-label="Service attempt 2 Date" name="Service attempt 2 Date" type="text" placeholder="MM/DD/YYYY">
+      </label>
+      <label>
+        Service attempt 2 time
+        <input aria-label="Service attempt 2 time" name="Service attempt 2 time" type="text" placeholder="HH:MM AM/PM">
+      </label><br>
+      <label>
+        Service attempt3 date
+        <input aria-label="Service attempt3 date" name="Service attempt3 date" type="text" placeholder="MM/DD/YYYY">
+      </label>
+      <label>
+        Service attempt 3 time
+        <input aria-label="Service attempt 3 time" name="Service attempt 3 time" type="text" placeholder="HH:MM AM/PM">
+      </label><br>
+      <label>
+        Service attempt number 4
+        <input aria-label="Service attempt number 4" name="Service attempt number 4" type="text" placeholder="MM/DD/YYYY">
+      </label>
+      <label>
+        Service attempt 4 time
+        <input aria-label="Service attempt 4 time" name="Service attempt 4 time" type="text" placeholder="HH:MM AM/PM">
+      </label><br>
+      <label>
+        Service attempt5 Date
+        <input aria-label="Service attempt5 Date" name="Service attempt5 Date" type="text" placeholder="MM/DD/YYYY">
+      </label>
+      <label>
+        Service attempt 5 time
+        <input aria-label="Service attempt 5 time" name="Service attempt 5 time" type="text" placeholder="HH:MM AM/PM">
+      </label><br>
+      <label>
+        Comments
+        <textarea aria-label="Comments" name="Comments"></textarea>
+      </label><br>
+      <button type="submit">Generate PDF</button>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js" data-cfasync="false"></script>
+  <script src="affidavit.js" data-cfasync="false"></script>
+</body>
+</html>

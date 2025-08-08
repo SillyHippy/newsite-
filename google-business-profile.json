@@ -1,0 +1,48 @@
+{
+  "name": "Just Legal Solutions",
+  "category": "Process Server",
+  "phone": "(539) 367-6832",
+  "website": "https://justlegalsolutions.org",
+  "address": {
+    "street": "Tulsa, OK",
+    "city": "Tulsa",
+    "state": "OK",
+    "zip": "74101"
+  },
+  "description": "Professional process serving and legal document delivery throughout Tulsa County. Licensed and bonded process servers offering same-day, rush, and standard service. Serving attorneys, law firms, and individuals with reliable court document delivery.",
+  "services": [
+    "Process Serving",
+    "Legal Document Delivery",
+    "Court Filing Services",
+    "Same-Day Service",
+    "Rush Service",
+    "Subpoena Service",
+    "Eviction Service",
+    "Emergency Service"
+  ],
+  "attributes": [
+    "Licensed",
+    "Bonded",
+    "Insured",
+    "Same-day service",
+    "Weekend availability",
+    "Emergency service",
+    "Free consultation",
+    "24/7 availability"
+  ],
+  "hours": {
+    "monday": "08:00-17:00",
+    "tuesday": "08:00-17:00",
+    "wednesday": "08:00-17:00",
+    "thursday": "08:00-17:00",
+    "friday": "08:00-17:00",
+    "saturday": "09:00-15:00",
+    "sunday": "Emergency only"
+  },
+  "competitorAnalysis": {
+    "yourserved.com": {
+      "weaknesses": ["Generic service", "Higher pricing", "Slower response"],
+      "ourAdvantages": ["Local focus", "Same-day service", "Personal touch"]
+    }
+  }
+}

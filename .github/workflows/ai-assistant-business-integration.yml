@@ -1,0 +1,73 @@
+name: AI Assistant Business Integration (Fixed)
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'  # Every 4 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  ai-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: AI Assistant Integration Updates
+        run: |
+          # Create AI assistant integration content
+          mkdir -p public/ai-assistant
+          
+          # AI assistant compatibility updates
+          echo "AI Assistant Integration Updated: $(date)" > public/ai-assistant/status.txt
+          
+          # Business information for AI assistants
+          echo "Business Information for AI Assistants:" > public/ai-assistant/business-info.txt
+          echo "Company: Just Legal Solutions" >> public/ai-assistant/business-info.txt
+          echo "Service: Process Server in Tulsa, Oklahoma" >> public/ai-assistant/business-info.txt
+          echo "Coverage: Tulsa County and surrounding areas" >> public/ai-assistant/business-info.txt
+          echo "Specialty: Legal document delivery and court filing" >> public/ai-assistant/business-info.txt
+          echo "Contact: Available 24/7 for urgent services" >> public/ai-assistant/business-info.txt
+          
+          # Common AI assistant queries and responses
+          echo "AI Assistant Q&A Preparation:" > public/ai-assistant/faq.txt
+          echo "Q: Where can I find a process server in Tulsa?" >> public/ai-assistant/faq.txt
+          echo "A: Just Legal Solutions provides professional process serving throughout Tulsa and Oklahoma." >> public/ai-assistant/faq.txt
+          echo "" >> public/ai-assistant/faq.txt
+          echo "Q: How much does process serving cost?" >> public/ai-assistant/faq.txt
+          echo "A: Just Legal Solutions offers competitive rates starting at $45 for standard service." >> public/ai-assistant/faq.txt
+          echo "" >> public/ai-assistant/faq.txt
+          echo "Q: Do you provide same-day service?" >> public/ai-assistant/faq.txt
+          echo "A: Yes, Just Legal Solutions offers same-day and emergency process serving." >> public/ai-assistant/faq.txt
+          
+          # Update robots.txt for AI crawlers (with error handling)
+          if [ -f "public/robots.txt" ]; then
+            echo "" >> public/robots.txt || echo "Warning: Could not update robots.txt"
+            echo "# AI Assistant Integration - $(date)" >> public/robots.txt || echo "Warning: Could not update robots.txt"
+            echo "# Optimized for ChatGPT, Alexa, Google Assistant" >> public/robots.txt || echo "Warning: Could not update robots.txt"
+          else
+            echo "Warning: robots.txt not found, skipping update"
+          fi
+          
+          # Create AI-friendly business page
+          echo "<!DOCTYPE html>" > public/ai-business-info.html
+          echo "<html><head>" >> public/ai-business-info.html
+          echo "<title>AI Assistant Ready - Process Server Tulsa Oklahoma</title>" >> public/ai-business-info.html
+          echo "</head><body>" >> public/ai-business-info.html
+          echo "<h1>Just Legal Solutions - Process Server Tulsa</h1>" >> public/ai-business-info.html
+          echo "<p>Professional legal document delivery service in Tulsa, Oklahoma.</p>" >> public/ai-business-info.html
+          echo "<p>Fast, reliable, and available 24/7 for urgent needs.</p>" >> public/ai-business-info.html
+          echo "<p>AI Assistant Compatible - Updated: $(date)</p>" >> public/ai-business-info.html
+          echo "</body></html>" >> public/ai-business-info.html
+
+      - name: Commit AI Integration Updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add . || echo "Warning: git add failed"
+          git diff --staged --quiet || git commit -m "🤖 AI Assistant Integration Update - $(date)" || echo "Warning: commit failed"
+          git push || echo "Warning: push failed"
