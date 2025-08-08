@@ -164,7 +164,7 @@ export default function ReviewWidget() {
 
               {/* Review Text */}
               <blockquote className="text-xl text-gray-700 text-center mb-6 leading-relaxed italic">
-                "{current.text}"
+                &ldquo;{current.text}&rdquo;
               </blockquote>
 
               {/* Reviewer Info */}

@@ -48,7 +48,7 @@ export function Footer() {
         {/* Experience Trust Badge */}
         <div className="text-center mb-6">
           <div className="inline-block bg-gradient-to-r from-blue-100 to-green-100 text-blue-800 font-bold rounded-lg px-6 py-3 shadow-md border border-blue-200">
-            🏆 50+ Years' Combined Experience • Oklahoma's Trusted Legal Document Experts
+            🏆 50+ Years&apos; Combined Experience • Oklahoma&apos;s Trusted Legal Document Experts
           </div>
         </div>
         

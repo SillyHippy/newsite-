@@ -8,7 +8,7 @@ export default function OwnerBio() {
         {/* Experience Trust Header */}
         <div className="text-center mb-12">
           <div className="inline-block bg-yellow-100 text-yellow-800 font-bold rounded-lg px-6 py-3 shadow-md text-xl border border-yellow-200 mb-6">
-            🏆 Trusted by Oklahoma's Legal Community for Over 50 Years
+            🏆 Trusted by Oklahoma&apos;s Legal Community for Over 50 Years
           </div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our certified team and professional partners bring decades of combined experience in process serving, 
@@ -28,20 +28,20 @@ export default function OwnerBio() {
               <h3 className="text-xl font-semibold text-blue-800 mb-3">Founder & CEO</h3>
               <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-4">
                 <p className="text-blue-800 font-semibold">
-                  🎯 Leading a team and partner network with 50+ years' combined experience in Oklahoma legal document delivery, 
+                  🎯 Leading a team and partner network with 50+ years&apos; combined experience in Oklahoma legal document delivery, 
                   court filings, and process service across Tulsa County and beyond.
                 </p>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                After a debilitating injury led to a five-year ordeal with a slow workers' compensation system, 
+                After a debilitating injury led to a five-year ordeal with a slow workers&apos; compensation system, 
                 Joseph discovered firsthand how delays in the legal process can devastate lives. This personal 
                 experience became the driving force behind Just Legal Solutions.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                "What should have been a one-year recovery took five years of my life away," said Joseph. 
-                "I learned that in the legal world, delays have profound human consequences. I started this 
+                &ldquo;What should have been a one-year recovery took five years of my life away,&rdquo; said Joseph. 
+                &ldquo;I learned that in the legal world, delays have profound human consequences. I started this 
                 company to ensure no one else has their life put on hold because the system is too slow, 
-                too opaque, or too indifferent."
+                too opaque, or too indifferent.&rdquo;
               </p>
             </div>
 
@@ -74,9 +74,9 @@ export default function OwnerBio() {
             <div className="bg-white rounded-lg p-6 shadow-md border-l-4 border-blue-600">
               <h4 className="font-semibold text-gray-900 mb-2">Our Mission</h4>
               <p className="text-gray-700 italic">
-                "My experience taught me that you have to be your own biggest advocate. Now, my company can be 
+                &ldquo;My experience taught me that you have to be your own biggest advocate. Now, my company can be 
                 that advocate for others. We handle the frustrating, time-consuming tasks so our clients can 
-                focus on what matters most: their cases and their lives."
+                focus on what matters most: their cases and their lives.&rdquo;
               </p>
             </div>
           </div>

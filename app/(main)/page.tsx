@@ -63,7 +63,7 @@ export default function Home() {
           {/* Trust Badge - 50+ Years Experience */}
           <div className="mb-8">
             <div className="inline-block bg-blue-100 text-blue-800 font-semibold rounded-lg px-6 py-3 shadow-lg text-lg md:text-xl border border-blue-200" aria-label="Combined legal experience of team and partners">
-              ⭐ Over 50 Years' Combined Experience Serving Oklahoma's Legal Community
+              ⭐ Over 50 Years&apos; Combined Experience Serving Oklahoma&apos;s Legal Community
             </div>
             <p className="mt-3 text-base md:text-lg text-gray-200 max-w-2xl mx-auto">
               Our certified team and professional partners deliver trusted, court-compliant process serving solutions backed by decades of expertise.
