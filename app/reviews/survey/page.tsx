@@ -33,8 +33,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "As a practicing attorney, I've worked with many process servers. Just Legal Solutions 
-                consistently delivers professional service with detailed documentation. Highly recommended."
+                &ldquo;As a practicing attorney, I&apos;ve worked with many process servers. Just Legal Solutions 
+                consistently delivers professional service with detailed documentation. Highly recommended.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Legal Document Service</div>
@@ -66,8 +66,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Just Legal Solutions consistently provides proper service of process in my courtroom. 
-                Their affidavits are always complete and professionally prepared. Excellent work."
+                &ldquo;Just Legal Solutions consistently provides proper service of process in my courtroom. 
+                Their affidavits are always complete and professionally prepared. Excellent work.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Court Document Process Serving</div>
