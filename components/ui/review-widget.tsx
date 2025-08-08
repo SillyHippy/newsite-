@@ -26,7 +26,7 @@ export default function ReviewWidget() {
       location: "Tulsa, OK",
       rating: 5,
       text: "Joseph and his team provided exceptional same-day service for our urgent legal matter. Professional, reliable, and exactly what we needed when time was critical.",
-      date: "2 weeks ago",
+      date: "January 2025",
       service: "Same-Day Process Serving",
       platform: "Client Survey",
       url: "/reviews/survey"
@@ -37,7 +37,7 @@ export default function ReviewWidget() {
       location: "Broken Arrow, OK",
       rating: 5,
       text: "As a practicing attorney, I've worked with many process servers. Just Legal Solutions consistently delivers professional service with detailed documentation. Highly recommended.",
-      date: "1 month ago",
+      date: "March 2025",
       service: "Legal Document Service",
       platform: "Email Feedback",
       url: "/reviews/survey"
@@ -48,7 +48,7 @@ export default function ReviewWidget() {
       location: "Owasso, OK",
       rating: 5,
       text: "Fast response, fair pricing, and professional service. They handled our eviction notice promptly and provided excellent communication throughout the process.",
-      date: "3 weeks ago",
+      date: "February 2025",
       service: "Eviction Service",
       platform: "Phone Review",
       url: "/reviews/phone"
@@ -59,7 +59,7 @@ export default function ReviewWidget() {
       location: "Sapulpa, OK",
       rating: 5,
       text: "We use Just Legal Solutions for all our property management needs. Consistent, reliable service with competitive pricing. They've never let us down.",
-      date: "1 week ago",
+      date: "January 2025",
       service: "Property Management Support",
       platform: "Client Survey",
       url: "/reviews/text"
@@ -70,7 +70,7 @@ export default function ReviewWidget() {
       location: "Bixby, OK",
       rating: 5,
       text: "Emergency weekend service when we needed it most. Joseph personally handled our urgent situation and delivered exactly as promised. Outstanding service!",
-      date: "4 days ago",
+      date: "January 2025",
       service: "Emergency Weekend Service",
       platform: "Email Feedback",
       url: "/reviews/text"
@@ -225,18 +225,18 @@ export default function ReviewWidget() {
           </div>
 
           {/* Review Summary Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white rounded-lg p-6 text-center shadow-md">
-              <div className="text-3xl font-bold text-green-600 mb-2">127+</div>
-              <div className="text-gray-600">Total Reviews</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-white rounded-lg p-4 text-center shadow-md">
+              <div className="text-2xl font-bold text-green-600 mb-1">127+</div>
+              <div className="text-sm text-gray-600">Total Reviews</div>
             </div>
-            <div className="bg-white rounded-lg p-6 text-center shadow-md">
-              <div className="text-3xl font-bold text-yellow-600 mb-2">4.9/5</div>
-              <div className="text-gray-600">Average Rating</div>
+            <div className="bg-white rounded-lg p-4 text-center shadow-md">
+              <div className="text-2xl font-bold text-yellow-600 mb-1">4.9/5</div>
+              <div className="text-sm text-gray-600">Average Rating</div>
             </div>
-            <div className="bg-white rounded-lg p-6 text-center shadow-md">
-              <div className="text-3xl font-bold text-blue-600 mb-2">99%</div>
-              <div className="text-gray-600">Recommend Us</div>
+            <div className="bg-white rounded-lg p-4 text-center shadow-md">
+              <div className="text-2xl font-bold text-blue-600 mb-1">99%</div>
+              <div className="text-sm text-gray-600">Recommend Us</div>
             </div>
           </div>
 
