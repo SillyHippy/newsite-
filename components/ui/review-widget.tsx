@@ -10,6 +10,7 @@ interface Review {
   date: string;
   service: string;
   platform: 'Client Survey' | 'Phone Review' | 'Email Feedback';
+  url?: string;
 }
 
 export default function ReviewWidget() {
@@ -25,7 +26,8 @@ export default function ReviewWidget() {
       text: "Joseph and his team provided exceptional same-day service for our urgent legal matter. Professional, reliable, and exactly what we needed when time was critical.",
       date: "2 weeks ago",
       service: "Same-Day Process Serving",
-      platform: "Client Survey"
+      platform: "Client Survey",
+      url: "/reviews/survey"
     },
     {
       id: 2,
@@ -35,7 +37,8 @@ export default function ReviewWidget() {
       text: "As a practicing attorney, I've worked with many process servers. Just Legal Solutions consistently delivers professional service with detailed documentation. Highly recommended.",
       date: "1 month ago",
       service: "Legal Document Service",
-      platform: "Email Feedback"
+      platform: "Email Feedback",
+      url: "/reviews/survey"
     },
     {
       id: 3,
@@ -45,7 +48,8 @@ export default function ReviewWidget() {
       text: "Fast response, fair pricing, and professional service. They handled our eviction notice promptly and provided excellent communication throughout the process.",
       date: "3 weeks ago",
       service: "Eviction Service",
-      platform: "Phone Review"
+      platform: "Phone Review",
+      url: "/reviews/phone"
     },
     {
       id: 4,
@@ -55,7 +59,8 @@ export default function ReviewWidget() {
       text: "We use Just Legal Solutions for all our property management needs. Consistent, reliable service with competitive pricing. They've never let us down.",
       date: "1 week ago",
       service: "Property Management Support",
-      platform: "Client Survey"
+      platform: "Client Survey",
+      url: "/reviews/text"
     },
     {
       id: 5,
@@ -65,7 +70,8 @@ export default function ReviewWidget() {
       text: "Emergency weekend service when we needed it most. Joseph personally handled our urgent situation and delivered exactly as promised. Outstanding service!",
       date: "4 days ago",
       service: "Emergency Weekend Service",
-      platform: "Email Feedback"
+      platform: "Email Feedback",
+      url: "/reviews/text"
     }
   ];
 
