@@ -199,8 +199,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Needed subpoenas served for an important court case. Joseph's team was thorough, 
-                professional, and provided detailed affidavits. Top-notch legal support."
+                &ldquo;Needed subpoenas served for an important court case. Joseph&apos;s team was thorough, 
+                professional, and provided detailed affidavits. Top-notch legal support.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Subpoena Process Serving</div>
@@ -231,8 +231,8 @@ export default function PhoneReviewValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Custody document service during a sensitive time. Joseph and his team handled everything 
-                with compassion and professionalism. Made a difficult situation much easier."
+                &ldquo;Custody document service during a sensitive time. Joseph and his team handled everything 
+                with compassion and professionalism. Made a difficult situation much easier.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Custody Document Process Serving</div>

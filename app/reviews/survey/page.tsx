@@ -99,8 +99,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Our law firm relies on Just Legal Solutions for all process serving needs. Joseph's 
-                team is thorough, professional, and always meets court deadlines. Outstanding service."
+                &ldquo;Our law firm relies on Just Legal Solutions for all process serving needs. Joseph&apos;s 
+                team is thorough, professional, and always meets court deadlines. Outstanding service.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Law Firm Process Serving Support</div>
@@ -132,8 +132,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Just Legal Solutions handles civil process serving professionally when our department 
-                is overloaded. Joseph follows all protocols and provides excellent documentation."
+                &ldquo;Just Legal Solutions handles civil process serving professionally when our department 
+                is overloaded. Joseph follows all protocols and provides excellent documentation.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Civil Process Serving Support</div>
@@ -165,8 +165,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Working at a busy law firm, I coordinate with many process servers. Joseph's team 
-                is the most reliable and professional. They make my job easier with excellent communication."
+                &ldquo;Working at a busy law firm, I coordinate with many process servers. Joseph&apos;s team 
+                is the most reliable and professional. They make my job easier with excellent communication.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Multiple Legal Document Services</div>
@@ -198,8 +198,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Just Legal Solutions serves our legal documents efficiently for insurance claims. 
-                Joseph's team understands our urgency and always delivers proper service documentation."
+                &ldquo;Just Legal Solutions serves our legal documents efficiently for insurance claims. 
+                Joseph&apos;s team understands our urgency and always delivers proper service documentation.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Insurance Legal Document Service</div>
@@ -231,8 +231,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Just Legal Solutions files proper affidavits with our court consistently. Joseph's 
-                documentation is always complete and meets all filing requirements perfectly."
+                &ldquo;Just Legal Solutions files proper affidavits with our court consistently. Joseph&apos;s 
+                documentation is always complete and meets all filing requirements perfectly.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Court Filing and Process Serving</div>
@@ -264,8 +264,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Working courthouse security, I see many process servers. Joseph's team is always 
-                professional and respectful in the courthouse environment. Top-notch operation."
+                &ldquo;Working courthouse security, I see many process servers. Joseph&apos;s team is always 
+                professional and respectful in the courthouse environment. Top-notch operation.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Courthouse Process Serving</div>
@@ -297,8 +297,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "I schedule process serving for our firm regularly. Joseph's team is always responsive 
-                and provides excellent updates. Professional service that attorneys can rely on."
+                &ldquo;I schedule process serving for our firm regularly. Joseph&apos;s team is always responsive 
+                and provides excellent updates. Professional service that attorneys can rely on.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Law Firm Support Services</div>
@@ -330,8 +330,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Just Legal Solutions provides proper service of process for our small claims court. 
-                Joseph's affidavits are always legally sufficient and properly executed."
+                &ldquo;Just Legal Solutions provides proper service of process for our small claims court. 
+                Joseph&apos;s affidavits are always legally sufficient and properly executed.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Small Claims Court Process Serving</div>
@@ -363,8 +363,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Real estate litigation papers served professionally for property disputes. Joseph's 
-                team understands the urgency of real estate matters and delivers excellent service."
+                &ldquo;Real estate litigation papers served professionally for property disputes. Joseph&apos;s 
+                team understands the urgency of real estate matters and delivers excellent service.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Real Estate Litigation Process Serving</div>
@@ -396,8 +396,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Accounting malpractice lawsuit papers served professionally for our liability case. 
-                Joseph's detailed documentation helped our legal defense significantly."
+                &ldquo;Accounting malpractice lawsuit papers served professionally for our liability case. 
+                Joseph&apos;s detailed documentation helped our legal defense significantly.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Professional Liability Process Serving</div>
@@ -429,8 +429,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Foreclosure and banking litigation papers served efficiently for our institution. 
-                Joseph's team understands banking regulations and provides excellent documentation."
+                &ldquo;Foreclosure and banking litigation papers served efficiently for our institution. 
+                Joseph&apos;s team understands banking regulations and provides excellent documentation.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Banking Litigation Process Serving</div>
@@ -462,8 +462,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Medical malpractice papers served to our facility professionally and discreetly. 
-                Joseph's team handles sensitive healthcare matters with appropriate professionalism."
+                &ldquo;Medical malpractice papers served to our facility professionally and discreetly. 
+                Joseph&apos;s team handles sensitive healthcare matters with appropriate professionalism.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Healthcare Litigation Process Serving</div>
@@ -495,8 +495,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Construction defect lawsuit papers served professionally for our engineering case. 
-                Joseph's attention to technical details and proper service was exceptional."
+                &ldquo;Construction defect lawsuit papers served professionally for our engineering case. 
+                Joseph&apos;s attention to technical details and proper service was exceptional.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Construction Litigation Process Serving</div>
@@ -528,8 +528,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Municipal litigation papers served properly for our county legal matters. Joseph's 
-                team understands government procedures and provides excellent service documentation."
+                &ldquo;Municipal litigation papers served properly for our county legal matters. Joseph&apos;s 
+                team understands government procedures and provides excellent service documentation.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Municipal Litigation Process Serving</div>
@@ -561,8 +561,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Property title dispute papers served efficiently for our real estate closings. 
-                Joseph's team understands the urgency of title issues and delivers excellent service."
+                &ldquo;Property title dispute papers served efficiently for our real estate closings. 
+                Joseph&apos;s team understands the urgency of title issues and delivers excellent service.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Title Dispute Process Serving</div>
@@ -594,8 +594,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Arbitration documents served professionally for alternative dispute resolution cases. 
-                Joseph's team understands arbitration procedures and provides excellent documentation."
+                &ldquo;Arbitration documents served professionally for alternative dispute resolution cases. 
+                Joseph&apos;s team understands arbitration procedures and provides excellent documentation.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Arbitration Document Process Serving</div>
@@ -627,8 +627,8 @@ export default function ClientSurveyValidation() {
                 ))}
               </div>
               <p className="text-gray-700 mb-3">
-                "Mediation documents served properly for family law disputes. Joseph's sensitive 
-                handling of family matters and professional service is greatly appreciated."
+                &ldquo;Mediation documents served properly for family law disputes. Joseph&apos;s sensitive 
+                handling of family matters and professional service is greatly appreciated.&rdquo;
               </p>
               <div className="text-sm text-gray-500">
                 <div>Service: Family Mediation Process Serving</div>

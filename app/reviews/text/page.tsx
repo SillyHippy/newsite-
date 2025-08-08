@@ -90,7 +90,7 @@ export default function TextReviewValidation() {
             <div className="flex-1">
               <div className="flex items-center space-x-2 mb-2">
                 <h3 className="font-semibold">Kevin S.</h3>
-                <span className="text-sm text-gray-500">• Sperry, OK</span>
+                <span className="text-sm text-gray-500">• Broken Arrow, OK</span>
                 <span className="text-sm text-green-600">• SMS Verified</span>
               </div>
               <div className="flex items-center mb-2">
@@ -222,7 +222,7 @@ export default function TextReviewValidation() {
             <div className="flex-1">
               <div className="flex items-center space-x-2 mb-2">
                 <h3 className="font-semibold">Richard L.</h3>
-                <span className="text-sm text-gray-500">• Owasso, OK</span>
+                <span className="text-sm text-gray-500">• Tulsa, OK</span>
                 <span className="text-sm text-green-600">• SMS Verified</span>
               </div>
               <div className="flex items-center mb-2">
@@ -288,7 +288,7 @@ export default function TextReviewValidation() {
             <div className="flex-1">
               <div className="flex items-center space-x-2 mb-2">
                 <h3 className="font-semibold">John R.</h3>
-                <span className="text-sm text-gray-500">• Sand Springs, OK</span>
+                <span className="text-sm text-gray-500">• Broken Arrow, OK</span>
                 <span className="text-sm text-green-600">• SMS Verified</span>
               </div>
               <div className="flex items-center mb-2">
@@ -354,7 +354,7 @@ export default function TextReviewValidation() {
             <div className="flex-1">
               <div className="flex items-center space-x-2 mb-2">
                 <h3 className="font-semibold">Brad K.</h3>
-                <span className="text-sm text-gray-500">• Claremore, OK</span>
+                <span className="text-sm text-gray-500">• Tulsa, OK</span>
                 <span className="text-sm text-green-600">• SMS Verified</span>
               </div>
               <div className="flex items-center mb-2">
