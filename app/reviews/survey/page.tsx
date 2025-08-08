@@ -139,7 +139,7 @@ export default function ClientSurveyValidation() {
                 <div>Service: Civil Process Serving Support</div>
                 <div>Date: January 2025</div>
                 <div>Collection Method: Law enforcement survey</div>
-                <div>Professional Verification: Rogers County Sheriff's Office</div>
+                <div>Professional Verification: Rogers County Sheriff&apos;s Office</div>
                 <div>Survey ID: CS-2025-008</div>
               </div>
             </div>
