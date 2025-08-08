@@ -119,44 +119,44 @@ export default function ReviewWidget() {
   const current = reviews[currentReview];
 
   return (
-    <section className="bg-gradient-to-br from-yellow-50 to-orange-50 py-16">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="bg-gradient-to-br from-yellow-50 to-orange-50 py-10">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center items-center mb-4">
+        <div className="text-center mb-8">
+          <div className="flex justify-center items-center mb-3">
             <div className="flex items-center">
               {renderStars(5)}
-              <span className="ml-2 text-2xl font-bold text-gray-900">4.9/5</span>
+              <span className="ml-2 text-xl font-bold text-gray-900">4.9/5</span>
             </div>
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-3">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-base text-gray-600">
             127+ verified reviews from satisfied clients across Oklahoma
           </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-            <span className="bg-gray-100 px-3 py-1 rounded-full">
+          <div className="mt-3 flex flex-wrap justify-center gap-2 text-xs text-gray-500">
+            <span className="bg-gray-100 px-2 py-1 rounded-full">
               📍 Google Business Profile
             </span>
-            <span className="bg-gray-100 px-3 py-1 rounded-full">
+            <span className="bg-gray-100 px-2 py-1 rounded-full">
               🌟 Yelp Business Reviews
             </span>
-            <span className="bg-gray-100 px-3 py-1 rounded-full">
+            <span className="bg-gray-100 px-2 py-1 rounded-full">
               👥 Facebook Client Feedback
             </span>
-            <span className="bg-gray-100 px-3 py-1 rounded-full">
+            <span className="bg-gray-100 px-2 py-1 rounded-full">
               📞 Phone Consultation Reviews
             </span>
-            <span className="bg-gray-100 px-3 py-1 rounded-full">
+            <span className="bg-gray-100 px-2 py-1 rounded-full">
               ✍️ Direct Client Testimonials
             </span>
           </div>
         </div>
 
         {/* Main Review Display */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8 relative">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-6 relative">
             {/* Navigation Buttons */}
             <button 
               onClick={prevReview}
@@ -174,12 +174,12 @@ export default function ReviewWidget() {
             </button>
 
             {/* Review Content */}
-            <div className="px-12">
+            <div className="px-8">
               {/* Platform Badge */}
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-3">
                 <a 
                   href={current.url}
-                  className={`px-3 py-1 rounded-full text-sm font-semibold ${getPlatformColor(current.platform)} bg-gray-100 hover:bg-gray-200 transition-colors inline-flex items-center gap-1`}
+                  className={`px-2 py-1 rounded-full text-xs font-semibold ${getPlatformColor(current.platform)} bg-gray-100 hover:bg-gray-200 transition-colors inline-flex items-center gap-1`}
                 >
                   {current.platform} Review
                   <ExternalLink className="h-3 w-3" />
@@ -187,12 +187,12 @@ export default function ReviewWidget() {
               </div>
 
               {/* Stars */}
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-3">
                 {renderStars(current.rating)}
               </div>
 
               {/* Review Text */}
-              <blockquote className="text-xl text-gray-700 text-center mb-6 leading-relaxed italic">
+              <blockquote className="text-lg text-gray-700 text-center mb-4 leading-relaxed italic">
                 &ldquo;{current.text}&rdquo;
               </blockquote>
 
@@ -207,7 +207,7 @@ export default function ReviewWidget() {
           </div>
 
           {/* Review Indicators */}
-          <div className="flex justify-center space-x-2 mb-8">
+          <div className="flex justify-center space-x-2 mb-6">
             {reviews.map((_, index) => (
               <button
                 key={index}
